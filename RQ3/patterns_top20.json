@@ -1,0 +1,162 @@
+[
+  {
+    "name": "traceback_unix_line_func",
+    "category": "Error & Debug Information",
+    "template": "File \"<UNIX_PATH>\", line <NUM>, in <WORD>",
+    "regex": "file\\s*\"~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?\"\\s*,\\s*line\\s*\\d+\\s*,\\s*in\\s*[A-Za-z_]\\w*",
+    "support": 870,
+    "exact_regex": "file\"~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?\",line\\s*87,in\\s*handle_request"
+  },
+  {
+    "name": "traceback_win_line_module",
+    "category": "Error & Debug Information",
+    "template": "File \"<WIN_PATH>\", line <NUM>, in <module>",
+    "regex": "file\\s*\"[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\"\\s*,\\s*line\\s*\\d+\\s*,\\s*in\\s*<module>",
+    "support": 618,
+    "exact_regex": "file\"[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\",line\\s*\\d+,in<module>"
+  },
+  {
+    "name": "unix_path",
+    "category": "Error & Debug Information",
+    "template": "<UNIX_PATH>",
+    "regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+    "support": 300,
+    "exact_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?"
+  },
+  {
+    "name": "win_path",
+    "category": "Error & Debug Information",
+    "template": "<WIN_PATH>",
+    "regex": "[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}",
+    "support": 190,
+    "exact_regex": "[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}"
+  },
+  {
+    "name": "db_uri",
+    "category": "Database & Connection Strings",
+    "template": "<DB_URI>",
+    "regex": "(?:mongodb|postgresql|postgres|mysql|redis|sqlite|mssql|oracle)(?:\\+[\\w]+)?://[^\\s\\'\"<>]+",
+    "support": 286,
+    "exact_regex": "(?:mongodb|postgresql|postgres|mysql|redis|sqlite|mssql|oracle)(?:\\+[\\w]+)?://[^\\s\\'\"<>]+"
+  },
+  {
+    "name": "jdbc_url",
+    "category": "Database & Connection Strings",
+    "template": "jdbc:<DRIVER>://<HOST>/<DB>",
+    "regex": "jdbc:(?:mysql|postgresql|oracle|sqlserver|mariadb|h2)://[^\\s\\'\"<>]+",
+    "support": 0,
+    "exact_regex": null
+  },
+  {
+    "name": "url",
+    "category": "Network & Infrastructure",
+    "template": "<URL>",
+    "regex": "https?://[^\\s\\'\"<>]+",
+    "support": 119,
+    "exact_regex": "https?://[^\\s\\'\"<>]+"
+  },
+  {
+    "name": "ip_address",
+    "category": "Network & Infrastructure",
+    "template": "<IP_ADDRESS>",
+    "regex": "\\b\\d{1,3}(?:\\.\\d{1,3}){3}(?::\\d{1,5})?\\b",
+    "support": 30,
+    "exact_regex": "\\d{1,3}(?:\\.\\d{1,3}){3}"
+  },
+  {
+    "name": "key_eq_med_key",
+    "category": "Credentials & Secrets",
+    "template": "<KEY_NAME>=['\"]<SECRET_KEY>['\"]",
+    "regex": "(?:bscscan_api_key|youtube_api_key|acr_access_key|api_dev_key|secret_key|accesskey|client_id|secretkey|hf_token|api_key|apikey|secret|key)\\s*=\\s*[\\'\"][A-Za-z0-9_\\-]{20,39}[\\'\"]",
+    "support": 176,
+    "exact_regex": "(?:bscscan_api_key|youtube_api_key|acr_access_key|cryptoapikey|api_dev_key|secret_key|accesskey|client_id|secretkey|hf_token|api_key|apikey|secret|key)=(?:'|\"|\u2018|<|\u201c)[A-Za-z0-9_\\-]{20,39}(?:'|\"|\u2019|>|\u201d)"
+  },
+  {
+    "name": "key_eq_long_key",
+    "category": "Credentials & Secrets",
+    "template": "<KEY_NAME>=['\"]<API_KEY>['\"]",
+    "regex": "(?:api_secret|client_secret|access_token|api_secret|auth_token|api_key|apikey|token)\\s*=\\s*[\\'\"][A-Za-z0-9+\\/=_\\-]{40,}[\\'\"]",
+    "support": 58,
+    "exact_regex": "(?:api_secret_binance|acr_access_secret|api_key_binance|system_account|client_secret|access_token|bucket_name|api_secret|user_token|auth_token|api_key|apikey|token)=(?:'|\")[A-Za-z0-9+\\/=_\\-]{40,}(?:'|\")"
+  },
+  {
+    "name": "key_eq_hash",
+    "category": "Credentials & Secrets",
+    "template": "<KEY_NAME>=\"<HASH>\"",
+    "regex": "(?:consumer_secret|secret_key|app_secret|api_secret|api_key|apikey|sign)\\s*=\\s*\"[0-9a-fA-F]{32,64}\"",
+    "support": 45,
+    "exact_regex": "(?:infura_project_id|consumer_secret|acr_access_key|api_user_key|consumer_key|token_secret|api_secret|secret_key|app_secret|vision_key|device_id|token_key|api_key|apikey|sign)=\"[0-9a-fA-F]{32,64}\""
+  },
+  {
+    "name": "telegram_bot_token",
+    "category": "Credentials & Secrets",
+    "template": "<TOKEN_VAR>='<BOT_ID>:<SECRET>'",
+    "regex": "(?:telegram_api_token|telegram_bot_token|api_token|bot_token|token)\\s*=\\s*['\\\"]?\\d+:[A-Za-z0-9_\\-]{20,50}['\\\"]?",
+    "support": 59,
+    "exact_regex": "(?:telegram_api_token|telegram_bot_token|api_token|bot_token|bottoken|token)='(?:6306133720|6143413294|6438563555|5893668363|7142273329|6715895820|6937803168|7070823778|7082642346|6084658919|6668161332|6749569815|1935475560|6835315645|5828712341):[A-Za-z0-9_\\-]{20,39}'"
+  },
+  {
+    "name": "aws_access_key_id",
+    "category": "Credentials & Secrets",
+    "template": "AKIA<20-CHAR-KEY>",
+    "regex": "AKIA[0-9A-Z]{16}",
+    "support": 0,
+    "exact_regex": null
+  },
+  {
+    "name": "jwt_token",
+    "category": "Credentials & Secrets",
+    "template": "<JWT_TOKEN>",
+    "regex": "eyJ[A-Za-z0-9_\\-]+(?:\\.[A-Za-z0-9_\\-]+){2}",
+    "support": 0,
+    "exact_regex": null
+  },
+  {
+    "name": "pem_block",
+    "category": "Cryptographic Material",
+    "template": "-----BEGIN/END <TYPE>-----",
+    "regex": "-----(?:BEGIN|END)\\s+[A-Z ]+-----",
+    "support": 0,
+    "exact_regex": null
+  },
+  {
+    "name": "hex_hash",
+    "category": "Cryptographic Material",
+    "template": "<HASH>",
+    "regex": "\\b[0-9a-fA-F]{64}\\b|\\b[0-9a-fA-F]{40}\\b|\\b[0-9a-fA-F]{32}\\b",
+    "support": 8,
+    "exact_regex": "[0-9a-fA-F]{32,64}"
+  },
+  {
+    "name": "email_address",
+    "category": "Personal Identifiable Information",
+    "template": "<EMAIL>",
+    "regex": "[\\w._%+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}",
+    "support": 23,
+    "exact_regex": "[\\w._%+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}"
+  },
+  {
+    "name": "uuid",
+    "category": "Personal Identifiable Information",
+    "template": "<UUID>",
+    "regex": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
+    "support": 0,
+    "exact_regex": null
+  },
+  {
+    "name": "credit_card_number",
+    "category": "Financial Information",
+    "template": "<16-DIGIT-CARD-NUMBER>",
+    "regex": "\\b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})\\b",
+    "support": 0,
+    "exact_regex": null
+  },
+  {
+    "name": "eth_address",
+    "category": "Cryptocurrency",
+    "template": "<ETH_ADDRESS>",
+    "regex": "\\b0x[0-9a-fA-F]{40}\\b",
+    "support": 18,
+    "exact_regex": "0x[0-9a-fA-F]{40}"
+  }
+]

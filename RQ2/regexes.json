@@ -1,0 +1,6528 @@
+{
+  "Error & Debug Information": [
+    {
+      "id": "tt-1",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WIN_PATH",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "file\"<WIN_PATH>\",line <NUM>,in<module>",
+      "executable_regex": "file\"[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\",line\\s*\\d+,in<module>",
+      "support": 997,
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-2",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "UNIX_PATH",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "file\"<UNIX_PATH>\",line 87,in handle_request",
+      "executable_regex": "file\"~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?\",line\\s*87,in\\s*handle_request",
+      "support": 881,
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-3",
+      "type_sequence": [
+        "UNIX_PATH"
+      ],
+      "abstract_template": "<UNIX_PATH>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 676,
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-4",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WIN_PATH",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "file\"<WIN_PATH>\",line <NUM>,in <WORD>",
+      "executable_regex": "file\"[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\",line\\s*\\d+,in\\s*(?:_run_module_as_main|_ensure_numeric|handle_request|process_update|train_function|error_handler|collate_fn|__init__|__call__|forward|get_loc|unpad|fetch|main|run)",
+      "support": 539,
+      "vocabulary": {
+        "9": [
+          "_run_module_as_main",
+          "_ensure_numeric",
+          "handle_request",
+          "process_update",
+          "train_function",
+          "error_handler",
+          "collate_fn",
+          "__init__",
+          "__call__",
+          "forward",
+          "get_loc",
+          "unpad",
+          "fetch",
+          "main",
+          "run"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-5",
+      "type_sequence": [
+        "WIN_PATH"
+      ],
+      "abstract_template": "<WIN_PATH>",
+      "executable_regex": "[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}",
+      "support": 222,
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-6",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WIN_PATH",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "KEY_MED"
+      ],
+      "abstract_template": "file\"<WIN_PATH>\",line <NUM>,in <SECRET_KEY>",
+      "executable_regex": "file\"[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\",line\\s*(?:1464|415|209|142|135|101|232|504|220|181|184|19|57|24|9),in\\s*[A-Za-z0-9_\\-]{20,39}",
+      "support": 112,
+      "vocabulary": {
+        "6": [
+          "1464",
+          "415",
+          "209",
+          "142",
+          "135",
+          "101",
+          "232",
+          "504",
+          "220",
+          "181",
+          "184",
+          "19",
+          "57",
+          "24",
+          "9"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-7",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WIN_PATH",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM"
+      ],
+      "abstract_template": "file\"<WIN_PATH>\",line <NUM>",
+      "executable_regex": "file\"[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\",line\\s*(?:144|112|141|10|14|11|13|42|28|7|9|8|1|5|3)",
+      "support": 112,
+      "vocabulary": {
+        "6": [
+          "144",
+          "112",
+          "141",
+          "10",
+          "14",
+          "11",
+          "13",
+          "42",
+          "28",
+          "7",
+          "9",
+          "8",
+          "1",
+          "5",
+          "3"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-8",
+      "type_sequence": [
+        "UNIX_PATH",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<UNIX_PATH>,line <NUM>,in <WORD>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?,line\\s*(?:1401|1584|1081|555|391|110|215|166|749|698|232|115|87|72|40),in\\s*(?:wait_for_running|infinity_polling|handle_request|process_update|train_function|scan_callback|__getitem__|bulk_insert|cb_wrapper|_serve_db|_tag_root|train_fn|parse|load|run)",
+      "support": 96,
+      "vocabulary": {
+        "3": [
+          "1401",
+          "1584",
+          "1081",
+          "555",
+          "391",
+          "110",
+          "215",
+          "166",
+          "749",
+          "698",
+          "232",
+          "115",
+          "87",
+          "72",
+          "40"
+        ],
+        "6": [
+          "wait_for_running",
+          "infinity_polling",
+          "handle_request",
+          "process_update",
+          "train_function",
+          "scan_callback",
+          "__getitem__",
+          "bulk_insert",
+          "cb_wrapper",
+          "_serve_db",
+          "_tag_root",
+          "train_fn",
+          "parse",
+          "load",
+          "run"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-9",
+      "type_sequence": [
+        "UNIX_PATH",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<UNIX_PATH>:<NUM>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?:(?:186|102|229|123|105|100|410|87|28|14|29|12|22|4|6)",
+      "support": 59,
+      "vocabulary": {
+        "2": [
+          "186",
+          "102",
+          "229",
+          "123",
+          "105",
+          "100",
+          "410",
+          "87",
+          "28",
+          "14",
+          "29",
+          "12",
+          "22",
+          "4",
+          "6"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-10",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "UNIX_PATH",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "file\"<UNIX_PATH>\",line <NUM>,in<module>",
+      "executable_regex": "file\"~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?\",line\\s*(?:275|144|184|57|89|13|21|40|58|80|73|3|8|1|2),in<module>",
+      "support": 45,
+      "vocabulary": {
+        "6": [
+          "275",
+          "144",
+          "184",
+          "57",
+          "89",
+          "13",
+          "21",
+          "40",
+          "58",
+          "80",
+          "73",
+          "3",
+          "8",
+          "1",
+          "2"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-11",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WIN_PATH"
+      ],
+      "abstract_template": "at <WORD>(<WIN_PATH>",
+      "executable_regex": "at\\s*(?:buildwrappedmethod|assertargument|_sfc_ssrrender|executetrade|enqueuelinks|estimategas|trim_prefix|makeerror|getnumber|assert|main|test|home|send|run)\\([A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}",
+      "support": 44,
+      "vocabulary": {
+        "1": [
+          "buildwrappedmethod",
+          "assertargument",
+          "_sfc_ssrrender",
+          "executetrade",
+          "enqueuelinks",
+          "estimategas",
+          "trim_prefix",
+          "makeerror",
+          "getnumber",
+          "assert",
+          "main",
+          "test",
+          "home",
+          "send",
+          "run"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-12",
+      "type_sequence": [
+        "UNIX_PATH",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<UNIX_PATH>:<NUM>:<NUM>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?:(?:1188|1197|1183|1085|417|202|124|186|123|16|17|12|76|6|9):(?:16|50|54|39|14|43|15|13|33|12|26|23|35|9|5)",
+      "support": 39,
+      "vocabulary": {
+        "2": [
+          "1188",
+          "1197",
+          "1183",
+          "1085",
+          "417",
+          "202",
+          "124",
+          "186",
+          "123",
+          "16",
+          "17",
+          "12",
+          "76",
+          "6",
+          "9"
+        ],
+        "4": [
+          "16",
+          "50",
+          "54",
+          "39",
+          "14",
+          "43",
+          "15",
+          "13",
+          "33",
+          "12",
+          "26",
+          "23",
+          "35",
+          "9",
+          "5"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-13",
+      "type_sequence": [
+        "WORD",
+        "WIN_PATH"
+      ],
+      "abstract_template": "<WORD> <WIN_PATH>",
+      "executable_regex": "(?:file|at)\\s*[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}",
+      "support": 34,
+      "vocabulary": {
+        "0": [
+          "file",
+          "at"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-14",
+      "type_sequence": [
+        "WORD",
+        "JAVA_CLASS",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "at <JAVA_CLASS>(<WORD>.java:<NUM>)",
+      "executable_regex": "at\\s*[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\((?:k5mcninfluxapitest|garageitemsloader|customclassmapper|httpurlconnection|activitystarter|activitythread|tankkillmodel|xegeradriver|categoriadao|zygoteinit|instrument|dataevent|jsonutils|handler|looper)\\.java:(?:7356|6795|1283|7656|883|930|436|938|223|58|36|16|56|63|99)\\)",
+      "support": 34,
+      "vocabulary": {
+        "3": [
+          "k5mcninfluxapitest",
+          "garageitemsloader",
+          "customclassmapper",
+          "httpurlconnection",
+          "activitystarter",
+          "activitythread",
+          "tankkillmodel",
+          "xegeradriver",
+          "categoriadao",
+          "zygoteinit",
+          "instrument",
+          "dataevent",
+          "jsonutils",
+          "handler",
+          "looper"
+        ],
+        "7": [
+          "7356",
+          "6795",
+          "1283",
+          "7656",
+          "883",
+          "930",
+          "436",
+          "938",
+          "223",
+          "58",
+          "36",
+          "16",
+          "56",
+          "63",
+          "99"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-15",
+      "type_sequence": [
+        "UNIX_PATH",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<UNIX_PATH>,line <NUM>,in<module>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?,line\\s*(?:224|262|275|230|153|361|309|59|82|65|69|6|3|7|9),in<module>",
+      "support": 30,
+      "vocabulary": {
+        "3": [
+          "224",
+          "262",
+          "275",
+          "230",
+          "153",
+          "361",
+          "309",
+          "59",
+          "82",
+          "65",
+          "69",
+          "6",
+          "3",
+          "7",
+          "9"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-16",
+      "type_sequence": [
+        "URL"
+      ],
+      "abstract_template": "<URL>",
+      "executable_regex": "https?://[^\\s\\'\"<>]+",
+      "support": 30,
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-17",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WIN_PATH",
+        "PUNCT"
+      ],
+      "abstract_template": "file\"<WIN_PATH>\"",
+      "executable_regex": "file\"[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\"",
+      "support": 27,
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-18",
+      "type_sequence": [
+        "UNIX_PATH",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<UNIX_PATH> in <WORD>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?\\s*in\\s*(?:insert_env_defaults|_check_targets|_wrapreduction|error_handler|__getattr__|__getitem__|get_objects|_call_impl|_transform|_new_conn|is_speech|backward|get_loc|decode|save)",
+      "support": 25,
+      "vocabulary": {
+        "2": [
+          "insert_env_defaults",
+          "_check_targets",
+          "_wrapreduction",
+          "error_handler",
+          "__getattr__",
+          "__getitem__",
+          "get_objects",
+          "_call_impl",
+          "_transform",
+          "_new_conn",
+          "is_speech",
+          "backward",
+          "get_loc",
+          "decode",
+          "save"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-19",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:sourcehostname_user|email_app_password|postgres_password|acoustid_api_key|postgres_host|postgres_user|change_user|postgres_db|channel_id|api_secret|clientid|keyerror|password|api_key|realm)(?::|=)(?:\"|'|‘|“)(?:auto_order_on_rtpl|sinno_pd_manager|brwgearofnryfinh|your_api_secret|your_password|your_database|your_api_key|channel_id|damlqjwqua|your_host|your_user|director|student|sinno|data)(?:\"|'|’|”)",
+      "support": 23,
+      "vocabulary": {
+        "0": [
+          "sourcehostname_user",
+          "email_app_password",
+          "postgres_password",
+          "acoustid_api_key",
+          "postgres_host",
+          "postgres_user",
+          "change_user",
+          "postgres_db",
+          "channel_id",
+          "api_secret",
+          "clientid",
+          "keyerror",
+          "password",
+          "api_key",
+          "realm"
+        ],
+        "1": [
+          ":",
+          "="
+        ],
+        "2": [
+          "\"",
+          "'",
+          "‘",
+          "“"
+        ],
+        "3": [
+          "auto_order_on_rtpl",
+          "sinno_pd_manager",
+          "brwgearofnryfinh",
+          "your_api_secret",
+          "your_password",
+          "your_database",
+          "your_api_key",
+          "channel_id",
+          "damlqjwqua",
+          "your_host",
+          "your_user",
+          "director",
+          "student",
+          "sinno",
+          "data"
+        ],
+        "4": [
+          "\"",
+          "'",
+          "’",
+          "”"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-20",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WIN_PATH"
+      ],
+      "abstract_template": "at <WORD>.<WORD>(<WIN_PATH>",
+      "executable_regex": "at\\s*(?:interactionwebhook|sequentialhandler|exceptionshandler|nativeconnection|serverresponse|interface|function|contract|object|module|lobby|layer|rest)\\.(?:tryparsefraction|getfunctionname|process_params|handle_error|queuerequest|getfunction|parseunits|runrequest|loadnews|exports|ondata|catch|send|json|get)\\([A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}",
+      "support": 20,
+      "vocabulary": {
+        "1": [
+          "interactionwebhook",
+          "sequentialhandler",
+          "exceptionshandler",
+          "nativeconnection",
+          "serverresponse",
+          "interface",
+          "function",
+          "contract",
+          "object",
+          "module",
+          "lobby",
+          "layer",
+          "rest"
+        ],
+        "3": [
+          "tryparsefraction",
+          "getfunctionname",
+          "process_params",
+          "handle_error",
+          "queuerequest",
+          "getfunction",
+          "parseunits",
+          "runrequest",
+          "loadnews",
+          "exports",
+          "ondata",
+          "catch",
+          "send",
+          "json",
+          "get"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-21",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "UNIX_PATH",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "file\"<WORD> <UNIX_PATH>\",line <NUM>,in <WORD>",
+      "executable_regex": "file\"(?:aiohttp|apps|env)\\s*~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?\",line\\s*(?:1610|452|232|792|211|95|85|94|54|47|71|72),in\\s*(?:compile_restricted|get_report_result|_handle_request|application|execute_cmd|wrapper_fn|safe_exec|handle|call|run)",
+      "support": 18,
+      "vocabulary": {
+        "2": [
+          "aiohttp",
+          "apps",
+          "env"
+        ],
+        "7": [
+          "1610",
+          "452",
+          "232",
+          "792",
+          "211",
+          "95",
+          "85",
+          "94",
+          "54",
+          "47",
+          "71",
+          "72"
+        ],
+        "10": [
+          "compile_restricted",
+          "get_report_result",
+          "_handle_request",
+          "application",
+          "execute_cmd",
+          "wrapper_fn",
+          "safe_exec",
+          "handle",
+          "call",
+          "run"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-22",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "file\"<WORD>.py\",line <NUM>,in<module>",
+      "executable_regex": "file\"(?:decryptor|testing|main|test|cor)\\.py\",line\\s*(?:25|38|24|26|22|17|43|29|45|28|32|4|8),in<module>",
+      "support": 17,
+      "vocabulary": {
+        "2": [
+          "decryptor",
+          "testing",
+          "main",
+          "test",
+          "cor"
+        ],
+        "8": [
+          "25",
+          "38",
+          "24",
+          "26",
+          "22",
+          "17",
+          "43",
+          "29",
+          "45",
+          "28",
+          "32",
+          "4",
+          "8"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-23",
+      "type_sequence": [
+        "JAVA_CLASS",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "<JAVA_CLASS>(<WORD>.java:<NUM>)",
+      "executable_regex": "[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\((?:activitythread|datasnapshot|zygoteinit|dataevent|imagendao|handler|looper)\\.java:(?:7656|947|203|938|223|111|63|99)\\)",
+      "support": 17,
+      "vocabulary": {
+        "2": [
+          "activitythread",
+          "datasnapshot",
+          "zygoteinit",
+          "dataevent",
+          "imagendao",
+          "handler",
+          "looper"
+        ],
+        "6": [
+          "7656",
+          "947",
+          "203",
+          "938",
+          "223",
+          "111",
+          "63",
+          "99"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-24",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WIN_PATH"
+      ],
+      "abstract_template": "<WORD><PUNCT><WIN_PATH>",
+      "executable_regex": "(?:referenceerror|fullpath|error|file|path)(?::|\"|=)[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}",
+      "support": 15,
+      "vocabulary": {
+        "0": [
+          "referenceerror",
+          "fullpath",
+          "error",
+          "file",
+          "path"
+        ],
+        "1": [
+          ":",
+          "\"",
+          "="
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-25",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM"
+      ],
+      "abstract_template": "cell in[<NUM>],line <NUM>",
+      "executable_regex": "cell\\s*in\\[(?:21|55|35|13|84|57|47|12|40|5|1|3|6)\\],line\\s*(?:53|15|49|28|31|13|21|1|2|9)",
+      "support": 15,
+      "vocabulary": {
+        "3": [
+          "21",
+          "55",
+          "35",
+          "13",
+          "84",
+          "57",
+          "47",
+          "12",
+          "40",
+          "5",
+          "1",
+          "3",
+          "6"
+        ],
+        "7": [
+          "53",
+          "15",
+          "49",
+          "28",
+          "31",
+          "13",
+          "21",
+          "1",
+          "2",
+          "9"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-26",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "UNIX_PATH",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "file\"<UNIX_PATH>\",\"line 87,in handle_request",
+      "executable_regex": "file\"~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?\",\"line\\s*87,in\\s*handle_request",
+      "support": 15,
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-27",
+      "type_sequence": [
+        "UNIX_PATH",
+        "PUNCT",
+        "WORD",
+        "NUM"
+      ],
+      "abstract_template": "<UNIX_PATH><PUNCT>line <NUM>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?(?:,|:)line\\s*(?:894|219|206|268|131|138|25|96|13|72|80|57|99|54)",
+      "support": 14,
+      "vocabulary": {
+        "1": [
+          ",",
+          ":"
+        ],
+        "3": [
+          "894",
+          "219",
+          "206",
+          "268",
+          "131",
+          "138",
+          "25",
+          "96",
+          "13",
+          "72",
+          "80",
+          "57",
+          "99",
+          "54"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-28",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "URL"
+      ],
+      "abstract_template": "<WORD> <WORD><PUNCT><URL>",
+      "executable_regex": "(?:request|at)\\s*(?:getwrapperselector|cameracomponent|productreducer|selectproducts|singleproduct|mountswiper|productlist|router|url)(?:\\(|:)https?://[^\\s\\'\"<>]+",
+      "support": 13,
+      "vocabulary": {
+        "0": [
+          "request",
+          "at"
+        ],
+        "1": [
+          "getwrapperselector",
+          "cameracomponent",
+          "productreducer",
+          "selectproducts",
+          "singleproduct",
+          "mountswiper",
+          "productlist",
+          "router",
+          "url"
+        ],
+        "2": [
+          "(",
+          ":"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-29",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "UNIX_PATH",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "NUM"
+      ],
+      "abstract_template": "file\"<UNIX_PATH>\",line <NUM>",
+      "executable_regex": "file\"~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?\",line\\s*(?:422|205|129|14|30|98|40|10|5|4)",
+      "support": 12,
+      "vocabulary": {
+        "6": [
+          "422",
+          "205",
+          "129",
+          "14",
+          "30",
+          "98",
+          "40",
+          "10",
+          "5",
+          "4"
+        ]
+      },
+      "category": "Error & Debug Information"
+    },
+    {
+      "id": "tt-30",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "at <WORD>.<WORD>(<WORD>.<WORD>:<NUM>)",
+      "executable_regex": "at\\s*(?:concurrentbst|videoencoder|statictests|mainkt|floyd|menu|deck)\\.(?:getfullpathasstring|test1smallinputs|getshortestpath|printresult|dealcard|search|select|main|run)\\((?:concurrentbst|videoencoder|statictests|floyd|menu|main|deck)\\.(?:java|kt):(?:145|164|141|57|18|64|16|80|37|14|4)\\)",
+      "support": 12,
+      "vocabulary": {
+        "1": [
+          "concurrentbst",
+          "videoencoder",
+          "statictests",
+          "mainkt",
+          "floyd",
+          "menu",
+          "deck"
+        ],
+        "3": [
+          "getfullpathasstring",
+          "test1smallinputs",
+          "getshortestpath",
+          "printresult",
+          "dealcard",
+          "search",
+          "select",
+          "main",
+          "run"
+        ],
+        "5": [
+          "concurrentbst",
+          "videoencoder",
+          "statictests",
+          "floyd",
+          "menu",
+          "main",
+          "deck"
+        ],
+        "7": [
+          "java",
+          "kt"
+        ],
+        "9": [
+          "145",
+          "164",
+          "141",
+          "57",
+          "18",
+          "64",
+          "16",
+          "80",
+          "37",
+          "14",
+          "4"
+        ]
+      },
+      "category": "Error & Debug Information"
+    }
+  ],
+  "Credentials & Secrets": [
+    {
+      "id": "tt-31",
+      "type_sequence": [
+        "KEY_MED"
+      ],
+      "abstract_template": "<SECRET_KEY>",
+      "executable_regex": "[A-Za-z0-9_\\-]{20,39}",
+      "support": 69,
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-32",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:sender_password|admin_password|valid_username|access_token|access_key|api_token|client_id|secretkey|password|username|api_key|secret|apikey|token|user)(?:=|:)(?:\"|'|‘)(?:mx0vgl44p77gaxntdp|your_access_token|cmejejqsvffirxsb|your_password|your_username|laokyc_admin|your_api_key|mysecretkey|password123|walhalax|username|password|student|secret|user)(?:\"|'|’)",
+      "support": 67,
+      "vocabulary": {
+        "0": [
+          "sender_password",
+          "admin_password",
+          "valid_username",
+          "access_token",
+          "access_key",
+          "api_token",
+          "client_id",
+          "secretkey",
+          "password",
+          "username",
+          "api_key",
+          "secret",
+          "apikey",
+          "token",
+          "user"
+        ],
+        "1": [
+          "=",
+          ":"
+        ],
+        "2": [
+          "\"",
+          "'",
+          "‘"
+        ],
+        "3": [
+          "mx0vgl44p77gaxntdp",
+          "your_access_token",
+          "cmejejqsvffirxsb",
+          "your_password",
+          "your_username",
+          "laokyc_admin",
+          "your_api_key",
+          "mysecretkey",
+          "password123",
+          "walhalax",
+          "username",
+          "password",
+          "student",
+          "secret",
+          "user"
+        ],
+        "4": [
+          "\"",
+          "'",
+          "’"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-33",
+      "type_sequence": [
+        "WORD"
+      ],
+      "abstract_template": "<WORD>",
+      "executable_regex": "(?:api_secret_binance|your_password_here|api_key_binance|password_file|your_api_key|bucket_name|stripe_key|secret_key|password|sara8000|api_hash|authoken|bearer|api_id|token)",
+      "support": 62,
+      "vocabulary": {
+        "0": [
+          "api_secret_binance",
+          "your_password_here",
+          "api_key_binance",
+          "password_file",
+          "your_api_key",
+          "bucket_name",
+          "stripe_key",
+          "secret_key",
+          "password",
+          "sara8000",
+          "api_hash",
+          "authoken",
+          "bearer",
+          "api_id",
+          "token"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-34",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><SECRET_KEY><PUNCT>",
+      "executable_regex": "(?:bscscan_api_key|youtube_api_key|authorization|api_dev_key|secret_key|bot_token|client_id|hf_token|username|password|api_key|apikey|secret|sa_id|mail)=(?:'|\"|‘|“|<)[A-Za-z0-9_\\-]{20,39}(?:'|\"|’|”|>)",
+      "support": 60,
+      "vocabulary": {
+        "0": [
+          "bscscan_api_key",
+          "youtube_api_key",
+          "authorization",
+          "api_dev_key",
+          "secret_key",
+          "bot_token",
+          "client_id",
+          "hf_token",
+          "username",
+          "password",
+          "api_key",
+          "apikey",
+          "secret",
+          "sa_id",
+          "mail"
+        ],
+        "2": [
+          "'",
+          "\"",
+          "‘",
+          "“",
+          "<"
+        ],
+        "4": [
+          "'",
+          "\"",
+          "’",
+          "”",
+          ">"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-35",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><NUM>:<SECRET_KEY><PUNCT>",
+      "executable_regex": "(?:telegram_api_token|telegram_bot_token|api_token|bot_token|token)=(?:'|\")(?:6937803168|6143413294|6306133720|6757823333|6996318383|7070823778|5825009413|5828712341|7152618530|7142273329|6308742171|5893668363|6383798822|6835315645|6945390760):[A-Za-z0-9_\\-]{20,39}(?:'|\")",
+      "support": 60,
+      "vocabulary": {
+        "0": [
+          "telegram_api_token",
+          "telegram_bot_token",
+          "api_token",
+          "bot_token",
+          "token"
+        ],
+        "2": [
+          "'",
+          "\""
+        ],
+        "3": [
+          "6937803168",
+          "6143413294",
+          "6306133720",
+          "6757823333",
+          "6996318383",
+          "7070823778",
+          "5825009413",
+          "5828712341",
+          "7152618530",
+          "7142273329",
+          "6308742171",
+          "5893668363",
+          "6383798822",
+          "6835315645",
+          "6945390760"
+        ],
+        "6": [
+          "'",
+          "\""
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-36",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "KEY_LONG",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><API_KEY><PUNCT>",
+      "executable_regex": "(?:acr_access_secret|client_secret|access_token|api_secret|openai_key|auth_token|api_key|apikey|token)=(?:\"|'|‘)[A-Za-z0-9+\\/=_\\-]{40,}(?:\"|'|’)",
+      "support": 48,
+      "vocabulary": {
+        "0": [
+          "acr_access_secret",
+          "client_secret",
+          "access_token",
+          "api_secret",
+          "openai_key",
+          "auth_token",
+          "api_key",
+          "apikey",
+          "token"
+        ],
+        "2": [
+          "\"",
+          "'",
+          "‘"
+        ],
+        "4": [
+          "\"",
+          "'",
+          "’"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-37",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><PUNCT>",
+      "executable_regex": "(?:email_app_password|acr_access_secret|api_secret_mexc|acr_access_key|client_secret|access_token|api_key_mexc|api_secret|account_id|client_id|acr_host|api_key|user_id)=(?:'|\"|‘)(?:'|\"|’)",
+      "support": 45,
+      "vocabulary": {
+        "0": [
+          "email_app_password",
+          "acr_access_secret",
+          "api_secret_mexc",
+          "acr_access_key",
+          "client_secret",
+          "access_token",
+          "api_key_mexc",
+          "api_secret",
+          "account_id",
+          "client_id",
+          "acr_host",
+          "api_key",
+          "user_id"
+        ],
+        "2": [
+          "'",
+          "\"",
+          "‘"
+        ],
+        "3": [
+          "'",
+          "\"",
+          "’"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-38",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "HASH",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><HASH><PUNCT>",
+      "executable_regex": "(?:togetherai_api_key|subscription_key|acr_access_key|client_secret|api_user_key|api_secret|app_secret|auth_token|client_id|api_hash|api_key|apikey)=(?:\"|'|‘)[0-9a-fA-F]{32,64}(?:\"|'|’)",
+      "support": 42,
+      "vocabulary": {
+        "0": [
+          "togetherai_api_key",
+          "subscription_key",
+          "acr_access_key",
+          "client_secret",
+          "api_user_key",
+          "api_secret",
+          "app_secret",
+          "auth_token",
+          "client_id",
+          "api_hash",
+          "api_key",
+          "apikey"
+        ],
+        "2": [
+          "\"",
+          "'",
+          "‘"
+        ],
+        "4": [
+          "\"",
+          "'",
+          "’"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-39",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>",
+      "executable_regex": "(?:minio_root_password|linkgeneratorutil|minio_root_user|dashboard_user|developerkey|access_token|secret_key|access_key|api_secret|password|api_key|cookies|admin|user|msg)(?:=|\\.|\\-|:|,)(?:api_secret_binance|hx47cbz7nngf721n|api_key_binance|secret_password|secret_key|password|api_key|c563412|default|apikey|admin|jxch|id|u|p)",
+      "support": 36,
+      "vocabulary": {
+        "0": [
+          "minio_root_password",
+          "linkgeneratorutil",
+          "minio_root_user",
+          "dashboard_user",
+          "developerkey",
+          "access_token",
+          "secret_key",
+          "access_key",
+          "api_secret",
+          "password",
+          "api_key",
+          "cookies",
+          "admin",
+          "user",
+          "msg"
+        ],
+        "1": [
+          "=",
+          ".",
+          "-",
+          ":",
+          ","
+        ],
+        "2": [
+          "api_secret_binance",
+          "hx47cbz7nngf721n",
+          "api_key_binance",
+          "secret_password",
+          "secret_key",
+          "password",
+          "api_key",
+          "c563412",
+          "default",
+          "apikey",
+          "admin",
+          "jxch",
+          "id",
+          "u",
+          "p"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-40",
+      "type_sequence": [
+        "KEY_LONG"
+      ],
+      "abstract_template": "<API_KEY>",
+      "executable_regex": "[A-Za-z0-9+\\/=_\\-]{40,}",
+      "support": 24,
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-41",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD><PUNCT><WORD>",
+      "executable_regex": "(?:minio_access_key|minio_secret_key|server_address|authorization|openai|self|x|v)(?:=|\\.|\\-|\\~|:|,)(?:smohhoeai1q|rapidapi|username|password|api_key|access|secret|bearer|user)(?:\\-|=|\\}|\\$|,)(?:openai_api_key|password|api_key|user|host|key|pg)",
+      "support": 19,
+      "vocabulary": {
+        "0": [
+          "minio_access_key",
+          "minio_secret_key",
+          "server_address",
+          "authorization",
+          "openai",
+          "self",
+          "x",
+          "v"
+        ],
+        "1": [
+          "=",
+          ".",
+          "-",
+          "~",
+          ":",
+          ","
+        ],
+        "2": [
+          "smohhoeai1q",
+          "rapidapi",
+          "username",
+          "password",
+          "api_key",
+          "access",
+          "secret",
+          "bearer",
+          "user"
+        ],
+        "3": [
+          "-",
+          "=",
+          "}",
+          "$",
+          ","
+        ],
+        "4": [
+          "openai_api_key",
+          "password",
+          "api_key",
+          "user",
+          "host",
+          "key",
+          "pg"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-42",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER"
+      ],
+      "abstract_template": "user:'music',//з а м е н и т е н а с в о й л о г и н",
+      "executable_regex": "user:'music',//з\\s*а\\s*м\\s*е\\s*н\\s*и\\s*т\\s*е\\s*н\\s*а\\s*с\\s*в\\s*о\\s*й\\s*л\\s*о\\s*г\\s*и\\s*н",
+      "support": 17,
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-43",
+      "type_sequence": [
+        "IP_PORT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<IP:PORT>@<WORD>:<WORD>",
+      "executable_regex": "\\d{1,3}(?:\\.\\d{1,3}){3}:\\d{1,5}@(?:martinson2|martinson|martin):(?:pass0awawa|pass0o9o9o|password1)",
+      "support": 16,
+      "vocabulary": {
+        "2": [
+          "martinson2",
+          "martinson",
+          "martin"
+        ],
+        "4": [
+          "pass0awawa",
+          "pass0o9o9o",
+          "password1"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-44",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER"
+      ],
+      "abstract_template": "password:'password',//з а м е н и т е н а с в о й п а р о л ь",
+      "executable_regex": "password:'password',//з\\s*а\\s*м\\s*е\\s*н\\s*и\\s*т\\s*е\\s*н\\s*а\\s*с\\s*в\\s*о\\s*й\\s*п\\s*а\\s*р\\s*о\\s*л\\s*ь",
+      "support": 16,
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-45",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "secret:\"mysecretkey\",\"",
+      "executable_regex": "secret:\"mysecretkey\",\"",
+      "support": 16,
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-46",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "const modeltoken='<SECRET_KEY>';",
+      "executable_regex": "const\\s*modeltoken='[A-Za-z0-9_\\-]{20,39}';",
+      "support": 14,
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-47",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<WORD>=<NUM>",
+      "executable_regex": "(?:routecode|admin_id|api_id|value|root)=(?:905365847976|989037374|29926568|20180878|20630834|89272168|969)",
+      "support": 13,
+      "vocabulary": {
+        "0": [
+          "routecode",
+          "admin_id",
+          "api_id",
+          "value",
+          "root"
+        ],
+        "2": [
+          "905365847976",
+          "989037374",
+          "29926568",
+          "20180878",
+          "20630834",
+          "89272168",
+          "969"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-48",
+      "type_sequence": [
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD>",
+      "executable_regex": "(?:keypassword|operator|keyalias|discord|bearer|secret|admin|viber|use|api)\\s*(?:releasekeypassword|releasekeyalias|password|apikey|token|key|jwt)",
+      "support": 13,
+      "vocabulary": {
+        "0": [
+          "keypassword",
+          "operator",
+          "keyalias",
+          "discord",
+          "bearer",
+          "secret",
+          "admin",
+          "viber",
+          "use",
+          "api"
+        ],
+        "1": [
+          "releasekeypassword",
+          "releasekeyalias",
+          "password",
+          "apikey",
+          "token",
+          "key",
+          "jwt"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-49",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD><PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:applicationid|authorization|musixmatch|openai|set)(?:\"|“|\\(|:|=)(?:openai_api_key|musixmatch|password|token|com)(?:=|\\.|<|\\()(?:replicate_api_key|openai_api_key|yellowstar520|receipe_app|exception)(?:\"|”|\\)|>)",
+      "support": 12,
+      "vocabulary": {
+        "0": [
+          "applicationid",
+          "authorization",
+          "musixmatch",
+          "openai",
+          "set"
+        ],
+        "1": [
+          "\"",
+          "“",
+          "(",
+          ":",
+          "="
+        ],
+        "2": [
+          "openai_api_key",
+          "musixmatch",
+          "password",
+          "token",
+          "com"
+        ],
+        "3": [
+          "=",
+          ".",
+          "<",
+          "("
+        ],
+        "4": [
+          "replicate_api_key",
+          "openai_api_key",
+          "yellowstar520",
+          "receipe_app",
+          "exception"
+        ],
+        "5": [
+          "\"",
+          "”",
+          ")",
+          ">"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-50",
+      "type_sequence": [
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:<|\\[|\"|\\()(?:your_tenant_id|your_bot_token|chef_password|chef_username|bot_token|password|redacted|chef|user)(?:>|\\]|\"|\\))",
+      "support": 12,
+      "vocabulary": {
+        "0": [
+          "<",
+          "[",
+          "\"",
+          "("
+        ],
+        "1": [
+          "your_tenant_id",
+          "your_bot_token",
+          "chef_password",
+          "chef_username",
+          "bot_token",
+          "password",
+          "redacted",
+          "chef",
+          "user"
+        ],
+        "2": [
+          ">",
+          "]",
+          "\"",
+          ")"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-51",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><NUM><PUNCT>",
+      "executable_regex": "(?:default_chat_id|other_chat_id|password|login_id|app_id)=(?:'|\")(?:614127750232182|1471225821|2993782886|12345678|969969|123456|654321)(?:'|\")",
+      "support": 11,
+      "vocabulary": {
+        "0": [
+          "default_chat_id",
+          "other_chat_id",
+          "password",
+          "login_id",
+          "app_id"
+        ],
+        "2": [
+          "'",
+          "\""
+        ],
+        "3": [
+          "614127750232182",
+          "1471225821",
+          "2993782886",
+          "12345678",
+          "969969",
+          "123456",
+          "654321"
+        ],
+        "4": [
+          "'",
+          "\""
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-52",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:musixmatch_api|storepassword|dashboard_pwd|keypassword|password|bearer|token)(?:\"|\\{|:|=|\\.)(?:monorfasa|api_token|jiang155|api_key|string|key)(?:\"|\\}|;|\\.|:)",
+      "support": 11,
+      "vocabulary": {
+        "0": [
+          "musixmatch_api",
+          "storepassword",
+          "dashboard_pwd",
+          "keypassword",
+          "password",
+          "bearer",
+          "token"
+        ],
+        "1": [
+          "\"",
+          "{",
+          ":",
+          "=",
+          "."
+        ],
+        "2": [
+          "monorfasa",
+          "api_token",
+          "jiang155",
+          "api_key",
+          "string",
+          "key"
+        ],
+        "3": [
+          "\"",
+          "}",
+          ";",
+          ".",
+          ":"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-53",
+      "type_sequence": [
+        "ETH_ADDR"
+      ],
+      "abstract_template": "<ETH_ADDRESS>",
+      "executable_regex": "0x[0-9a-fA-F]{40}",
+      "support": 10,
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-54",
+      "type_sequence": [
+        "JAVA_CLASS",
+        "WORD"
+      ],
+      "abstract_template": "<JAVA_CLASS> <WORD>",
+      "executable_regex": "[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\s*(?:_webhook_secret|_token_secret|_secret_key|_api_key|_secret)",
+      "support": 10,
+      "vocabulary": {
+        "1": [
+          "_webhook_secret",
+          "_token_secret",
+          "_secret_key",
+          "_api_key",
+          "_secret"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-55",
+      "type_sequence": [
+        "IP_PORT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<IP:PORT>@<WORD>:<NUM>",
+      "executable_regex": "\\d{1,3}(?:\\.\\d{1,3}){3}:\\d{1,5}@(?:admin|root):(?:123456|555555)",
+      "support": 10,
+      "vocabulary": {
+        "2": [
+          "admin",
+          "root"
+        ],
+        "4": [
+          "123456",
+          "555555"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-56",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>.<WORD><PUNCT><PUNCT><WORD><PUNCT><PUNCT>",
+      "executable_regex": "(?:username|client|app|os)\\.(?:config|getenv|equals|login)(?:\\(|\\[)(?:“|'|\"|‘)(?:receiver_address|discordtoken|aave_api_key|secret_key|admin)(?:”|'|\"|’)(?:\\)|\\])",
+      "support": 10,
+      "vocabulary": {
+        "0": [
+          "username",
+          "client",
+          "app",
+          "os"
+        ],
+        "2": [
+          "config",
+          "getenv",
+          "equals",
+          "login"
+        ],
+        "3": [
+          "(",
+          "["
+        ],
+        "4": [
+          "“",
+          "'",
+          "\"",
+          "‘"
+        ],
+        "5": [
+          "receiver_address",
+          "discordtoken",
+          "aave_api_key",
+          "secret_key",
+          "admin"
+        ],
+        "6": [
+          "”",
+          "'",
+          "\"",
+          "’"
+        ],
+        "7": [
+          ")",
+          "]"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-57",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "EMAIL",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=\"<EMAIL>\"",
+      "executable_regex": "(?:email_address|sender_email|my_email|email)=\"[\\w._%+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}\"",
+      "support": 10,
+      "vocabulary": {
+        "0": [
+          "email_address",
+          "sender_email",
+          "my_email",
+          "email"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-58",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "URL",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><URL><PUNCT>",
+      "executable_regex": "(?:anyscale_base_url|redirect_uri|rpc_api_url|login_url|token_url|ari_url|url)=(?:\"|')https?://[^\\s\\'\"<>]+(?:\"|')",
+      "support": 9,
+      "vocabulary": {
+        "0": [
+          "anyscale_base_url",
+          "redirect_uri",
+          "rpc_api_url",
+          "login_url",
+          "token_url",
+          "ari_url",
+          "url"
+        ],
+        "2": [
+          "\"",
+          "'"
+        ],
+        "4": [
+          "\"",
+          "'"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-59",
+      "type_sequence": [
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<PUNCT><WORD><PUNCT>:<PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:‘|'|\")(?:newpassword|password|apikey|secret|auth|pass|key)(?:’|'|\"):(?:‘|'|\")(?:complex_password|uvcgxss0fnpa5ict|your_api_secret|your_api_key|microsoft|xxxxxxxx|password)(?:’|'|\")",
+      "support": 9,
+      "vocabulary": {
+        "0": [
+          "‘",
+          "'",
+          "\""
+        ],
+        "1": [
+          "newpassword",
+          "password",
+          "apikey",
+          "secret",
+          "auth",
+          "pass",
+          "key"
+        ],
+        "2": [
+          "’",
+          "'",
+          "\""
+        ],
+        "4": [
+          "‘",
+          "'",
+          "\""
+        ],
+        "5": [
+          "complex_password",
+          "uvcgxss0fnpa5ict",
+          "your_api_secret",
+          "your_api_key",
+          "microsoft",
+          "xxxxxxxx",
+          "password"
+        ],
+        "6": [
+          "’",
+          "'",
+          "\""
+        ]
+      },
+      "category": "Credentials & Secrets"
+    },
+    {
+      "id": "tt-60",
+      "type_sequence": [
+        "NUM",
+        "PUNCT",
+        "KEY_MED"
+      ],
+      "abstract_template": "<NUM>:<SECRET_KEY>",
+      "executable_regex": "(?:7152618530|5922460493|6033289169|1935475560|5271487155|6325419857|6298783679):[A-Za-z0-9_\\-]{20,39}",
+      "support": 9,
+      "vocabulary": {
+        "0": [
+          "7152618530",
+          "5922460493",
+          "6033289169",
+          "1935475560",
+          "5271487155",
+          "6325419857",
+          "6298783679"
+        ]
+      },
+      "category": "Credentials & Secrets"
+    }
+  ],
+  "Database & Connection Strings": [
+    {
+      "id": "tt-61",
+      "type_sequence": [
+        "DB_URI"
+      ],
+      "abstract_template": "<DB_URI>",
+      "executable_regex": "(?:mongodb|postgresql|postgres|mysql|redis|sqlite|mssql|oracle)(?:\\+[\\w]+)?://[^\\s\\'\"<>]+",
+      "support": 47,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-62",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>",
+      "executable_regex": "(?:mysql_root_password|postgres_password|mysql_password|postgres_user|password|db_pass|db_user|db_host|db_name|db_port|db_url|notes|admin|user|pass)(?::|=|\\.|@)(?:my_secret_password|adminusertamara|asteriskpass|db_user_pass|postgresdsn|nextcloud|adminuser|localhost|asterisk|password|admin|json|str|uuu|int)",
+      "support": 38,
+      "vocabulary": {
+        "0": [
+          "mysql_root_password",
+          "postgres_password",
+          "mysql_password",
+          "postgres_user",
+          "password",
+          "db_pass",
+          "db_user",
+          "db_host",
+          "db_name",
+          "db_port",
+          "db_url",
+          "notes",
+          "admin",
+          "user",
+          "pass"
+        ],
+        "1": [
+          ":",
+          "=",
+          ".",
+          "@"
+        ],
+        "2": [
+          "my_secret_password",
+          "adminusertamara",
+          "asteriskpass",
+          "db_user_pass",
+          "postgresdsn",
+          "nextcloud",
+          "adminuser",
+          "localhost",
+          "asterisk",
+          "password",
+          "admin",
+          "json",
+          "str",
+          "uuu",
+          "int"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-63",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:__tablename__|mysql_user|database|password|_user|user|host|_pwd)=(?:'|‘|\")(?:mypassword|localhost|zxdb_read|password|records|root|log)(?:'|’|\")",
+      "support": 26,
+      "vocabulary": {
+        "0": [
+          "__tablename__",
+          "mysql_user",
+          "database",
+          "password",
+          "_user",
+          "user",
+          "host",
+          "_pwd"
+        ],
+        "2": [
+          "'",
+          "‘",
+          "\""
+        ],
+        "3": [
+          "mypassword",
+          "localhost",
+          "zxdb_read",
+          "password",
+          "records",
+          "root",
+          "log"
+        ],
+        "4": [
+          "'",
+          "’",
+          "\""
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-64",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "password='nikki@1234'",
+      "executable_regex": "password='nikki@1234'",
+      "support": 21,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-65",
+      "type_sequence": [
+        "WORD"
+      ],
+      "abstract_template": "<WORD>",
+      "executable_regex": "(?:connection_string|database_path|nd31012001|connection|localhost|postgres|conn_str|db_pass|db_user|db_port|db_name|db_host|ubuntu|root|pass)",
+      "support": 20,
+      "vocabulary": {
+        "0": [
+          "connection_string",
+          "database_path",
+          "nd31012001",
+          "connection",
+          "localhost",
+          "postgres",
+          "conn_str",
+          "db_pass",
+          "db_user",
+          "db_port",
+          "db_name",
+          "db_host",
+          "ubuntu",
+          "root",
+          "pass"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-66",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "host:'localhost',user:'music',password:'password'",
+      "executable_regex": "host:'localhost',user:'music',password:'password'",
+      "support": 15,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-67",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "host='localhost',database='records',user='root',password='nikki@1234'",
+      "executable_regex": "host='localhost',database='records',user='root',password='nikki@1234'",
+      "support": 14,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-68",
+      "type_sequence": [
+        "JAVA_CLASS",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "<JAVA_CLASS>(host='localhost',database='records',user='root',password='nikki@1234'",
+      "executable_regex": "[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\(host='localhost',database='records',user='root',password='nikki@1234'",
+      "support": 13,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-69",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "sqlite3.connect(<PUNCT><WORD>.db<PUNCT>)",
+      "executable_regex": "sqlite3\\.connect\\((?:'|‘|\")(?:poll_results|referral_bot|kross|chat|bot|eda)\\.db(?:'|’|\")\\)",
+      "support": 9,
+      "vocabulary": {
+        "4": [
+          "'",
+          "‘",
+          "\""
+        ],
+        "5": [
+          "poll_results",
+          "referral_bot",
+          "kross",
+          "chat",
+          "bot",
+          "eda"
+        ],
+        "8": [
+          "'",
+          "’",
+          "\""
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-70",
+      "type_sequence": [
+        "JAVA_CLASS",
+        "WORD"
+      ],
+      "abstract_template": "<JAVA_CLASS> <WORD>",
+      "executable_regex": "[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\s*(?:_webhook_secret|_secret_key|_username|_password|_url)",
+      "support": 8,
+      "vocabulary": {
+        "1": [
+          "_webhook_secret",
+          "_secret_key",
+          "_username",
+          "_password",
+          "_url"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-71",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD><PUNCT><WORD>",
+      "executable_regex": "(?:customername|username|password|dbname)(?::|=)(?:capital4j|portfolio|login)(?:\\-|\\.)(?:client|accdb|name)",
+      "support": 8,
+      "vocabulary": {
+        "0": [
+          "customername",
+          "username",
+          "password",
+          "dbname"
+        ],
+        "1": [
+          ":",
+          "="
+        ],
+        "2": [
+          "capital4j",
+          "portfolio",
+          "login"
+        ],
+        "3": [
+          "-",
+          "."
+        ],
+        "4": [
+          "client",
+          "accdb",
+          "name"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-72",
+      "type_sequence": [
+        "JAVA_CLASS",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<JAVA_CLASS>(host='localhost',database='records',user='root',password='nikki@1234')",
+      "executable_regex": "[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\(host='localhost',database='records',user='root',password='nikki@1234'\\)",
+      "support": 8,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-73",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "server=localhost;port=3306;username=root;password=root;database=horseracingdb",
+      "executable_regex": "server=localhost;port=3306;username=root;password=root;database=horseracingdb",
+      "support": 6,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-74",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "async with connect('bot.db')as db:",
+      "executable_regex": "async\\s*with\\s*connect\\('bot\\.db'\\)as\\s*db:",
+      "support": 6,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-75",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WIN_PATH",
+        "PUNCT"
+      ],
+      "abstract_template": "conn_str=r\"driver={microsoft access driver(*.mdb,*.accdb)};dbq=<WIN_PATH>\"",
+      "executable_regex": "conn_str=r\"driver=\\{microsoft\\s*access\\s*driver\\(\\*\\.mdb,\\*\\.accdb\\)\\};dbq=[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\"",
+      "support": 5,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-76",
+      "type_sequence": [
+        "URL"
+      ],
+      "abstract_template": "<URL>",
+      "executable_regex": "https?://[^\\s\\'\"<>]+",
+      "support": 4,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-77",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "async with aiosqlite.connect('<WORD>.db')as db:",
+      "executable_regex": "async\\s*with\\s*aiosqlite\\.connect\\('(?:users|base)\\.db'\\)as\\s*db:",
+      "support": 4,
+      "vocabulary": {
+        "7": [
+          "users",
+          "base"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-78",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "mysqli_connect(\"localhost\",\"root\",\"\",\"и н т е р н е т м а г а з и н о д е ж д ы\")",
+      "executable_regex": "mysqli_connect\\(\"localhost\",\"root\",\"\",\"и\\s*н\\s*т\\s*е\\s*р\\s*н\\s*е\\s*т\\s*м\\s*а\\s*г\\s*а\\s*з\\s*и\\s*н\\s*о\\s*д\\s*е\\s*ж\\s*д\\s*ы\"\\)",
+      "support": 4,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-79",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD> <WORD> <WORD> <WORD> <WORD>",
+      "executable_regex": "(?:password|admin|var)\\s*(?:found|roles|user)\\s*(?:wh_admin|for|by)\\s*(?:identified|roleentity|the)\\s*(?:user|via|by)\\s*(?:userrolestable|whadmin321|ken)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "password",
+          "admin",
+          "var"
+        ],
+        "1": [
+          "found",
+          "roles",
+          "user"
+        ],
+        "2": [
+          "wh_admin",
+          "for",
+          "by"
+        ],
+        "3": [
+          "identified",
+          "roleentity",
+          "the"
+        ],
+        "4": [
+          "user",
+          "via",
+          "by"
+        ],
+        "5": [
+          "userrolestable",
+          "whadmin321",
+          "ken"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-80",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=column(string(<NUM>),nullable=<WORD>)",
+      "executable_regex": "(?:response_error_code|response_error_type|request_method|phone_number)=column\\(string\\((?:10|5|8|2)\\),nullable=(?:false|true)\\)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "response_error_code",
+          "response_error_type",
+          "request_method",
+          "phone_number"
+        ],
+        "6": [
+          "10",
+          "5",
+          "8",
+          "2"
+        ],
+        "11": [
+          "false",
+          "true"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-81",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "FLOAT",
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "provider=microsoft.jet.oledb.4.0;data source=db_users.mdb",
+      "executable_regex": "provider=microsoft\\.jet\\.oledb\\.4\\.0;data\\s*source=db_users\\.mdb",
+      "support": 3,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-82",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "DB_URI"
+      ],
+      "abstract_template": "jdbc:<DB_URI>",
+      "executable_regex": "jdbc:(?:mongodb|postgresql|postgres|mysql|redis|sqlite|mssql|oracle)(?:\\+[\\w]+)?://[^\\s\\'\"<>]+",
+      "support": 3,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-83",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD>:<WORD><PUNCT><WORD><PUNCT><WORD><PUNCT><WORD>",
+      "executable_regex": "(?:mysql|jdbc):(?:shardingsphere|host)(?:=|:)(?:localhost|classpath)(?:;|:)(?:sharding|dbname)(?:=|\\.)(?:yaml|edu)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "mysql",
+          "jdbc"
+        ],
+        "2": [
+          "shardingsphere",
+          "host"
+        ],
+        "3": [
+          "=",
+          ":"
+        ],
+        "4": [
+          "localhost",
+          "classpath"
+        ],
+        "5": [
+          ";",
+          ":"
+        ],
+        "6": [
+          "sharding",
+          "dbname"
+        ],
+        "7": [
+          "=",
+          "."
+        ],
+        "8": [
+          "yaml",
+          "edu"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-84",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "session=session()",
+      "executable_regex": "session=session\\(\\)",
+      "support": 3,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-85",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><NUM>:<SECRET_KEY><PUNCT>",
+      "executable_regex": "(?:api_token|token)=(?:'|\")(?:7070823778|6937803168):[A-Za-z0-9_\\-]{20,39}(?:'|\")",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "api_token",
+          "token"
+        ],
+        "2": [
+          "'",
+          "\""
+        ],
+        "3": [
+          "7070823778",
+          "6937803168"
+        ],
+        "6": [
+          "'",
+          "\""
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-86",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>.<WORD><PUNCT><WORD><PUNCT><PUNCT>",
+      "executable_regex": "(?:_context|session|pedido)(?:=|\\.)(?:connection|pedidodao|users)\\.(?:findbyid|const|add)(?:\\(|\\.)(?:connecttodatabase|id_pedido|user)(?:\\)|\\()(?:;|\\))",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "_context",
+          "session",
+          "pedido"
+        ],
+        "1": [
+          "=",
+          "."
+        ],
+        "2": [
+          "connection",
+          "pedidodao",
+          "users"
+        ],
+        "4": [
+          "findbyid",
+          "const",
+          "add"
+        ],
+        "5": [
+          "(",
+          "."
+        ],
+        "6": [
+          "connecttodatabase",
+          "id_pedido",
+          "user"
+        ],
+        "7": [
+          ")",
+          "("
+        ],
+        "8": [
+          ";",
+          ")"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-87",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "JAVA_CLASS",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>:<JAVA_CLASS> <WORD>||'<WORD>'",
+      "executable_regex": "(?:password|user|host):[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\s*(?:_password|_user|_host)\\|\\|'(?:localhost|password|root)'",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "password",
+          "user",
+          "host"
+        ],
+        "3": [
+          "_password",
+          "_user",
+          "_host"
+        ],
+        "7": [
+          "localhost",
+          "password",
+          "root"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-88",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "host='localhost',user='root',password='123456'",
+      "executable_regex": "host='localhost',user='root',password='123456'",
+      "support": 3,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-89",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "host:'localhost',user:'music',password:'password',database:'music'",
+      "executable_regex": "host:'localhost',user:'music',password:'password',database:'music'",
+      "support": 3,
+      "category": "Database & Connection Strings"
+    },
+    {
+      "id": "tt-90",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "UNIX_PATH",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "fs.readfilesync(<PUNCT>.<UNIX_PATH><PUNCT>)",
+      "executable_regex": "fs\\.readfilesync\\((?:\"|“)\\.~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?(?:\"|”)\\)",
+      "support": 3,
+      "vocabulary": {
+        "4": [
+          "\"",
+          "“"
+        ],
+        "7": [
+          "\"",
+          "”"
+        ]
+      },
+      "category": "Database & Connection Strings"
+    }
+  ],
+  "Network & Infrastructure": [
+    {
+      "id": "tt-91",
+      "type_sequence": [
+        "IP"
+      ],
+      "abstract_template": "<IP_ADDRESS>",
+      "executable_regex": "\\d{1,3}(?:\\.\\d{1,3}){3}",
+      "support": 193,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-92",
+      "type_sequence": [
+        "URL"
+      ],
+      "abstract_template": "<URL>",
+      "executable_regex": "https?://[^\\s\\'\"<>]+",
+      "support": 115,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-93",
+      "type_sequence": [
+        "UNIX_PATH"
+      ],
+      "abstract_template": "<UNIX_PATH>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 44,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-94",
+      "type_sequence": [
+        "WIN_PATH"
+      ],
+      "abstract_template": "<WIN_PATH>",
+      "executable_regex": "[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}",
+      "support": 38,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-95",
+      "type_sequence": [
+        "WORD"
+      ],
+      "abstract_template": "<WORD>",
+      "executable_regex": "(?:e1oz87x7iod1ig|proxy_username|proxy_password|server_address|proxy_host|proxy_port|localhost|in_addr|enp0s25|server1|server2|server3|admin|pc1|ip)",
+      "support": 29,
+      "vocabulary": {
+        "0": [
+          "e1oz87x7iod1ig",
+          "proxy_username",
+          "proxy_password",
+          "server_address",
+          "proxy_host",
+          "proxy_port",
+          "localhost",
+          "in_addr",
+          "enp0s25",
+          "server1",
+          "server2",
+          "server3",
+          "admin",
+          "pc1",
+          "ip"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-96",
+      "type_sequence": [
+        "IP_PORT"
+      ],
+      "abstract_template": "<IP:PORT>",
+      "executable_regex": "\\d{1,3}(?:\\.\\d{1,3}){3}:\\d{1,5}",
+      "support": 16,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-97",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "IP",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>='<IP_ADDRESS>'",
+      "executable_regex": "(?:server_address|server_name|_servername|ip_address|hostname|ftp_host|host|ip)='\\d{1,3}(?:\\.\\d{1,3}){3}'",
+      "support": 13,
+      "vocabulary": {
+        "0": [
+          "server_address",
+          "server_name",
+          "_servername",
+          "ip_address",
+          "hostname",
+          "ftp_host",
+          "host",
+          "ip"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-98",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>",
+      "executable_regex": "(?:connection|director|upstream|request|upgrade|admin|root|eth|mac)(?::|\\-|\\.|\\\\)(?:sc_voskhod_backend|remote_addr|testoedovna|websocket|upgrade|trunk7|admin|root|xxx)",
+      "support": 11,
+      "vocabulary": {
+        "0": [
+          "connection",
+          "director",
+          "upstream",
+          "request",
+          "upgrade",
+          "admin",
+          "root",
+          "eth",
+          "mac"
+        ],
+        "1": [
+          ":",
+          "-",
+          ".",
+          "\\"
+        ],
+        "2": [
+          "sc_voskhod_backend",
+          "remote_addr",
+          "testoedovna",
+          "websocket",
+          "upgrade",
+          "trunk7",
+          "admin",
+          "root",
+          "xxx"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-99",
+      "type_sequence": [
+        "IP",
+        "UNIX_PATH"
+      ],
+      "abstract_template": "<IP_ADDRESS> <UNIX_PATH>",
+      "executable_regex": "\\d{1,3}(?:\\.\\d{1,3}){3}\\s*~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 11,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-100",
+      "type_sequence": [
+        "WORD",
+        "IP"
+      ],
+      "abstract_template": "<WORD> <IP_ADDRESS>",
+      "executable_regex": "(?:address|gateway|inet)\\s*\\d{1,3}(?:\\.\\d{1,3}){3}",
+      "support": 9,
+      "vocabulary": {
+        "0": [
+          "address",
+          "gateway",
+          "inet"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-101",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "IP"
+      ],
+      "abstract_template": "<WORD><PUNCT><IP_ADDRESS>",
+      "executable_regex": "(?:ansible_host|remote_ip|client_ip|gateway4|wg_host|andrew|host)(?::|=|@)\\d{1,3}(?:\\.\\d{1,3}){3}",
+      "support": 8,
+      "vocabulary": {
+        "0": [
+          "ansible_host",
+          "remote_ip",
+          "client_ip",
+          "gateway4",
+          "wg_host",
+          "andrew",
+          "host"
+        ],
+        "1": [
+          ":",
+          "=",
+          "@"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-102",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<WORD><PUNCT><NUM>",
+      "executable_regex": "(?:start_block|server_port|localhost|port)(?:=|:)(?:28496140|28949445|65432|6379|7898|3000|9500)",
+      "support": 7,
+      "vocabulary": {
+        "0": [
+          "start_block",
+          "server_port",
+          "localhost",
+          "port"
+        ],
+        "1": [
+          "=",
+          ":"
+        ],
+        "2": [
+          "28496140",
+          "28949445",
+          "65432",
+          "6379",
+          "7898",
+          "3000",
+          "9500"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-103",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "UNIX_PATH"
+      ],
+      "abstract_template": "<WORD>:/<UNIX_PATH>",
+      "executable_regex": "(?:ftp|wss):/~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 7,
+      "vocabulary": {
+        "0": [
+          "ftp",
+          "wss"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-104",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "KEY_LONG"
+      ],
+      "abstract_template": "<WORD><PUNCT><API_KEY>",
+      "executable_regex": "(?:presharedkey|traceparent|privatekey|cookie|sha256|token)(?::|=)[A-Za-z0-9+\\/=_\\-]{40,}",
+      "support": 6,
+      "vocabulary": {
+        "0": [
+          "presharedkey",
+          "traceparent",
+          "privatekey",
+          "cookie",
+          "sha256",
+          "token"
+        ],
+        "1": [
+          ":",
+          "="
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-105",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "UNIX_PATH",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<WORD>:/<UNIX_PATH>:<NUM>",
+      "executable_regex": "(?:socks4|rtsp|ftp|ws):/~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?:(?:3000|1935|4145|21)",
+      "support": 6,
+      "vocabulary": {
+        "0": [
+          "socks4",
+          "rtsp",
+          "ftp",
+          "ws"
+        ],
+        "5": [
+          "3000",
+          "1935",
+          "4145",
+          "21"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-106",
+      "type_sequence": [
+        "FLOAT",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<FLOAT>.<NUM>",
+      "executable_regex": "(?:10\\.118|10\\.119|10\\.197|10\\.198|10\\.201|10\\.97)\\.(?:168|54|78|35|47|76)",
+      "support": 6,
+      "vocabulary": {
+        "0": [
+          "10.118",
+          "10.119",
+          "10.197",
+          "10.198",
+          "10.201",
+          "10.97"
+        ],
+        "2": [
+          "168",
+          "54",
+          "78",
+          "35",
+          "47",
+          "76"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-107",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "URL",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><URL><PUNCT>",
+      "executable_regex": "(?:rpc_api_url|adress|proxy|url)=(?:\"|')https?://[^\\s\\'\"<>]+(?:\"|')",
+      "support": 6,
+      "vocabulary": {
+        "0": [
+          "rpc_api_url",
+          "adress",
+          "proxy",
+          "url"
+        ],
+        "2": [
+          "\"",
+          "'"
+        ],
+        "4": [
+          "\"",
+          "'"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-108",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "IP",
+        "IP"
+      ],
+      "abstract_template": "ip address <IP_ADDRESS> <IP_ADDRESS>",
+      "executable_regex": "ip\\s*address\\s*\\d{1,3}(?:\\.\\d{1,3}){3}\\s*\\d{1,3}(?:\\.\\d{1,3}){3}",
+      "support": 6,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-109",
+      "type_sequence": [
+        "KEY_MED"
+      ],
+      "abstract_template": "<SECRET_KEY>",
+      "executable_regex": "[A-Za-z0-9_\\-]{20,39}",
+      "support": 5,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-110",
+      "type_sequence": [
+        "KEY_LONG"
+      ],
+      "abstract_template": "<API_KEY>",
+      "executable_regex": "[A-Za-z0-9+\\/=_\\-]{40,}",
+      "support": 5,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-111",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "os.environ['<WORD>']",
+      "executable_regex": "os\\.environ\\['(?:webhook_url|server_ip|token)'\\]",
+      "support": 5,
+      "vocabulary": {
+        "5": [
+          "webhook_url",
+          "server_ip",
+          "token"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-112",
+      "type_sequence": [
+        "JAVA_CLASS"
+      ],
+      "abstract_template": "<JAVA_CLASS>",
+      "executable_regex": "[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}",
+      "support": 5,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-113",
+      "type_sequence": [
+        "IP",
+        "IP"
+      ],
+      "abstract_template": "<IP_ADDRESS> <IP_ADDRESS>",
+      "executable_regex": "\\d{1,3}(?:\\.\\d{1,3}){3}\\s*\\d{1,3}(?:\\.\\d{1,3}){3}",
+      "support": 5,
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-114",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "URL"
+      ],
+      "abstract_template": "<WORD>:<URL>",
+      "executable_regex": "(?:referer|origin):https?://[^\\s\\'\"<>]+",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "referer",
+          "origin"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-115",
+      "type_sequence": [
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD>",
+      "executable_regex": "(?:rootpw|admin|block|use)\\s*(?:number|apikey|blah|path)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "rootpw",
+          "admin",
+          "block",
+          "use"
+        ],
+        "1": [
+          "number",
+          "apikey",
+          "blah",
+          "path"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-116",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD> <WORD> <WORD> <WORD> <WORD> <WORD> <WORD>",
+      "executable_regex": "(?:scan|the|im|i)\\s*(?:palo|need|ip|in)\\s*(?:address|django|admin|alto)\\s*(?:firewall|admin|page|the)\\s*(?:backend|server|panel|can)\\s*(?:server|using|now|you)\\s*(?:launches|admin|tell|give)\\s*(?:credential|me|on)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "scan",
+          "the",
+          "im",
+          "i"
+        ],
+        "1": [
+          "palo",
+          "need",
+          "ip",
+          "in"
+        ],
+        "2": [
+          "address",
+          "django",
+          "admin",
+          "alto"
+        ],
+        "3": [
+          "firewall",
+          "admin",
+          "page",
+          "the"
+        ],
+        "4": [
+          "backend",
+          "server",
+          "panel",
+          "can"
+        ],
+        "5": [
+          "server",
+          "using",
+          "now",
+          "you"
+        ],
+        "6": [
+          "launches",
+          "admin",
+          "tell",
+          "give"
+        ],
+        "7": [
+          "credential",
+          "me",
+          "on"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-117",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "IP"
+      ],
+      "abstract_template": "<WORD> <WORD><PUNCT><IP_ADDRESS>",
+      "executable_regex": "(?:your|host|ssh)\\s*(?:kedoo|root|ip)(?:@|:|=)\\d{1,3}(?:\\.\\d{1,3}){3}",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "your",
+          "host",
+          "ssh"
+        ],
+        "1": [
+          "kedoo",
+          "root",
+          "ip"
+        ],
+        "2": [
+          "@",
+          ":",
+          "="
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-118",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD><PUNCT><WORD>",
+      "executable_regex": "(?:media|host|iss)(?:\\-|:)(?:reshetnev|jxch|user)(?:\\\\|\\.|\\-)(?:kropachevanv|krivtsovvv|token|org)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "media",
+          "host",
+          "iss"
+        ],
+        "1": [
+          "-",
+          ":"
+        ],
+        "2": [
+          "reshetnev",
+          "jxch",
+          "user"
+        ],
+        "3": [
+          "\\",
+          ".",
+          "-"
+        ],
+        "4": [
+          "kropachevanv",
+          "krivtsovvv",
+          "token",
+          "org"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-119",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WIN_PATH",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=r\"<WIN_PATH>\"",
+      "executable_regex": "(?:encrypted_file_path|decrypted_file_path|input_file_path|key_file_path)=r\"[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}\"",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "encrypted_file_path",
+          "decrypted_file_path",
+          "input_file_path",
+          "key_file_path"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    },
+    {
+      "id": "tt-120",
+      "type_sequence": [
+        "NUM"
+      ],
+      "abstract_template": "<NUM>",
+      "executable_regex": "(?:3000|2222|5600)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "3000",
+          "2222",
+          "5600"
+        ]
+      },
+      "category": "Network & Infrastructure"
+    }
+  ],
+  "Personal Identifiable Information": [
+    {
+      "id": "tt-121",
+      "type_sequence": [
+        "WORD"
+      ],
+      "abstract_template": "<WORD>",
+      "executable_regex": "(?:name_of_institution|address_line2|major_studies|jolnowak123|abdulrahman|id_number|username|password|address|country|degree|state|mosad|alan|zip)",
+      "support": 41,
+      "vocabulary": {
+        "0": [
+          "name_of_institution",
+          "address_line2",
+          "major_studies",
+          "jolnowak123",
+          "abdulrahman",
+          "id_number",
+          "username",
+          "password",
+          "address",
+          "country",
+          "degree",
+          "state",
+          "mosad",
+          "alan",
+          "zip"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-122",
+      "type_sequence": [
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT"
+      ],
+      "abstract_template": "<<SECRET_KEY>>",
+      "executable_regex": "<[A-Za-z0-9_\\-]{20,39}>",
+      "support": 29,
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-123",
+      "type_sequence": [
+        "EMAIL"
+      ],
+      "abstract_template": "<EMAIL>",
+      "executable_regex": "[\\w._%+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}",
+      "support": 18,
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-124",
+      "type_sequence": [
+        "NUM"
+      ],
+      "abstract_template": "<NUM>",
+      "executable_regex": "(?:89031234568|89031234569|89031234560|27928718536|79047765190|1234567890|1122334455|456789012|123121234|106245328|534612345|123456|156003)",
+      "support": 15,
+      "vocabulary": {
+        "0": [
+          "89031234568",
+          "89031234569",
+          "89031234560",
+          "27928718536",
+          "79047765190",
+          "1234567890",
+          "1122334455",
+          "456789012",
+          "123121234",
+          "106245328",
+          "534612345",
+          "123456",
+          "156003"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-125",
+      "type_sequence": [
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "{userdata?.<WORD>}",
+      "executable_regex": "\\{userdata\\?\\.(?:surname|email|phone|name)\\}",
+      "support": 15,
+      "vocabulary": {
+        "4": [
+          "surname",
+          "email",
+          "phone",
+          "name"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-126",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>",
+      "executable_regex": "(?:firstname|lastname|password|state|title|name|u)(?:\\.|=|:)(?:idusuario|director|password|telefono|apellido|brennan|hampton|nombre|email|tony|dni|ca)",
+      "support": 12,
+      "vocabulary": {
+        "0": [
+          "firstname",
+          "lastname",
+          "password",
+          "state",
+          "title",
+          "name",
+          "u"
+        ],
+        "1": [
+          ".",
+          "=",
+          ":"
+        ],
+        "2": [
+          "idusuario",
+          "director",
+          "password",
+          "telefono",
+          "apellido",
+          "brennan",
+          "hampton",
+          "nombre",
+          "email",
+          "tony",
+          "dni",
+          "ca"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-127",
+      "type_sequence": [
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD>",
+      "executable_regex": "(?:personal|warsaw|andrea|nahian|phone|email|full|jean|dob)\\s*(?:beaulieu|address|poland|lenght|number|rahman|rossi|email|name|date)",
+      "support": 11,
+      "vocabulary": {
+        "0": [
+          "personal",
+          "warsaw",
+          "andrea",
+          "nahian",
+          "phone",
+          "email",
+          "full",
+          "jean",
+          "dob"
+        ],
+        "1": [
+          "beaulieu",
+          "address",
+          "poland",
+          "lenght",
+          "number",
+          "rahman",
+          "rossi",
+          "email",
+          "name",
+          "date"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-128",
+      "type_sequence": [
+        "KEY_MED"
+      ],
+      "abstract_template": "<SECRET_KEY>",
+      "executable_regex": "[A-Za-z0-9_\\-]{20,39}",
+      "support": 8,
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-129",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD><PUNCT><WORD>",
+      "executable_regex": "(?:student|sheldon|rebecca|degree|will)\\s*(?:program|id|l|t)(?::|\\.)(?:software|douthat|riker|chen|a1|a2|a4|a5)",
+      "support": 8,
+      "vocabulary": {
+        "0": [
+          "student",
+          "sheldon",
+          "rebecca",
+          "degree",
+          "will"
+        ],
+        "1": [
+          "program",
+          "id",
+          "l",
+          "t"
+        ],
+        "2": [
+          ":",
+          "."
+        ],
+        "3": [
+          "software",
+          "douthat",
+          "riker",
+          "chen",
+          "a1",
+          "a2",
+          "a4",
+          "a5"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-130",
+      "type_sequence": [
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "@<WORD> nvarchar(<NUM>)",
+      "executable_regex": "@(?:dateofbirth|patronymic|firstname|lastname|pasport|region|snils|inn)\\s*nvarchar\\((?:255|50|15|12|14|20)\\)",
+      "support": 8,
+      "vocabulary": {
+        "1": [
+          "dateofbirth",
+          "patronymic",
+          "firstname",
+          "lastname",
+          "pasport",
+          "region",
+          "snils",
+          "inn"
+        ],
+        "4": [
+          "255",
+          "50",
+          "15",
+          "12",
+          "14",
+          "20"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-131",
+      "type_sequence": [
+        "NUM",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<NUM>-<NUM>-<NUM>",
+      "executable_regex": "(?:456|123|888|534)\\-(?:384|78|12|61)\\-(?:9012|1234|7144|2345)",
+      "support": 6,
+      "vocabulary": {
+        "0": [
+          "456",
+          "123",
+          "888",
+          "534"
+        ],
+        "2": [
+          "384",
+          "78",
+          "12",
+          "61"
+        ],
+        "4": [
+          "9012",
+          "1234",
+          "7144",
+          "2345"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-132",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>.<WORD>",
+      "executable_regex": "(?:citystate|session|email)(?:\\.|=)(?:customer_details|model|brea)\\.(?:email|phone|name|ca)",
+      "support": 5,
+      "vocabulary": {
+        "0": [
+          "citystate",
+          "session",
+          "email"
+        ],
+        "1": [
+          ".",
+          "="
+        ],
+        "2": [
+          "customer_details",
+          "model",
+          "brea"
+        ],
+        "4": [
+          "email",
+          "phone",
+          "name",
+          "ca"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-133",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "days in course:{<NUM>,<NUM>,<NUM>}",
+      "executable_regex": "days\\s*in\\s*course:\\{(?:50|30|20|10),(?:35|30|40|58|10),(?:40|33|10)\\}",
+      "support": 5,
+      "vocabulary": {
+        "5": [
+          "50",
+          "30",
+          "20",
+          "10"
+        ],
+        "7": [
+          "35",
+          "30",
+          "40",
+          "58",
+          "10"
+        ],
+        "9": [
+          "40",
+          "33",
+          "10"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-134",
+      "type_sequence": [
+        "NUM",
+        "UNIX_PATH"
+      ],
+      "abstract_template": "<NUM> <UNIX_PATH>",
+      "executable_regex": "(?:11|12|05)\\s*~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 5,
+      "vocabulary": {
+        "0": [
+          "11",
+          "12",
+          "05"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-135",
+      "type_sequence": [
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "+<NUM>",
+      "executable_regex": "\\+(?:79290465711|79200108309|79302487836|79306964588|40743123123)",
+      "support": 5,
+      "vocabulary": {
+        "1": [
+          "79290465711",
+          "79200108309",
+          "79302487836",
+          "79306964588",
+          "40743123123"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-136",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD> <WORD> <WORD>",
+      "executable_regex": "(?:subscription|phone|your|my)\\s*(?:microsoft|number|plan|date)\\s*(?:account|start|from|of)\\s*(?:netherlands|birth|time|data)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "subscription",
+          "phone",
+          "your",
+          "my"
+        ],
+        "1": [
+          "microsoft",
+          "number",
+          "plan",
+          "date"
+        ],
+        "2": [
+          "account",
+          "start",
+          "from",
+          "of"
+        ],
+        "3": [
+          "netherlands",
+          "birth",
+          "time",
+          "data"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-137",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<WORD><PUNCT><NUM>",
+      "executable_regex": "(?:minimumbasepay|zipcode|age|tel)(?:=|:)(?:123456|92821|15|20)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "minimumbasepay",
+          "zipcode",
+          "age",
+          "tel"
+        ],
+        "1": [
+          "=",
+          ":"
+        ],
+        "2": [
+          "123456",
+          "92821",
+          "15",
+          "20"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-138",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "EMAIL",
+        "PUNCT"
+      ],
+      "abstract_template": "email<PUNCT><PUNCT><EMAIL><PUNCT>",
+      "executable_regex": "email(?::|=)(?:\"|')[\\w._%+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}(?:\"|')",
+      "support": 4,
+      "vocabulary": {
+        "1": [
+          ":",
+          "="
+        ],
+        "2": [
+          "\"",
+          "'"
+        ],
+        "4": [
+          "\"",
+          "'"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-139",
+      "type_sequence": [
+        "NUM",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<NUM> <WORD> <WORD>,<WORD>,<WORD>,<NUM>",
+      "executable_regex": "(?:1701|66)\\s*(?:enterprise|lakeview|lkvw)\\s*(?:boulevard|road|blvd|rd),(?:starfleet|boston),(?:massachusetts|ca|ma),(?:94101|02125)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "1701",
+          "66"
+        ],
+        "1": [
+          "enterprise",
+          "lakeview",
+          "lkvw"
+        ],
+        "2": [
+          "boulevard",
+          "road",
+          "blvd",
+          "rd"
+        ],
+        "4": [
+          "starfleet",
+          "boston"
+        ],
+        "6": [
+          "massachusetts",
+          "ca",
+          "ma"
+        ],
+        "8": [
+          "94101",
+          "02125"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-140",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER"
+      ],
+      "abstract_template": "string <WORD>=\"+<NUM>\";//т е л е ф о н д л я а в т о с б р о с а",
+      "executable_regex": "string\\s*(?:call_phone3|call_phone4)=\"\\+(?:375000000002|375000000003)\";//т\\s*е\\s*л\\s*е\\s*ф\\s*о\\s*н\\s*д\\s*л\\s*я\\s*а\\s*в\\s*т\\s*о\\s*с\\s*б\\s*р\\s*о\\s*с\\s*а",
+      "support": 4,
+      "vocabulary": {
+        "1": [
+          "call_phone3",
+          "call_phone4"
+        ],
+        "5": [
+          "375000000002",
+          "375000000003"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-141",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD> <WORD>",
+      "executable_regex": "(?:university|rebecca|valid|john)\\s*(?:louise|phone|id|m)\\s*(?:number|togo|chen)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "university",
+          "rebecca",
+          "valid",
+          "john"
+        ],
+        "1": [
+          "louise",
+          "phone",
+          "id",
+          "m"
+        ],
+        "2": [
+          "number",
+          "togo",
+          "chen"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-142",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD>,<WORD>,<WORD>,<<SECRET_KEY>>,<NUM>,<NUM>,<NUM>,<NUM>,<WORD>",
+      "executable_regex": "(?:a2|a3|a5),(?:nahian|suzan|jack),(?:erickson|napoli|rahman),<[A-Za-z0-9_\\-]{20,39}>,(?:19|20),(?:50|20|10),(?:30|40|10),(?:40|33|10),(?:software|network)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "a2",
+          "a3",
+          "a5"
+        ],
+        "2": [
+          "nahian",
+          "suzan",
+          "jack"
+        ],
+        "4": [
+          "erickson",
+          "napoli",
+          "rahman"
+        ],
+        "10": [
+          "19",
+          "20"
+        ],
+        "12": [
+          "50",
+          "20",
+          "10"
+        ],
+        "14": [
+          "30",
+          "40",
+          "10"
+        ],
+        "16": [
+          "40",
+          "33",
+          "10"
+        ],
+        "18": [
+          "software",
+          "network"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-143",
+      "type_sequence": [
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER",
+        "OTHER"
+      ],
+      "abstract_template": "<VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> <VALUE> о в и ч",
+      "executable_regex": "(?:и|п|с)\\s*(?:в|е|м)\\s*(?:а|т|и)\\s*(?:н|р|т)\\s*(?:о|д)\\s*(?:в|ж)\\s*(?:и|п|о)\\s*(?:в|е|н)\\s*(?:а|т|р)\\s*(?:н|р|о)\\s*(?:и|п|б)\\s*(?:е|в)\\s*(?:а|т|р)\\s*(?:н|р|т)\\s*о\\s*в\\s*и\\s*ч",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "и",
+          "п",
+          "с"
+        ],
+        "1": [
+          "в",
+          "е",
+          "м"
+        ],
+        "2": [
+          "а",
+          "т",
+          "и"
+        ],
+        "3": [
+          "н",
+          "р",
+          "т"
+        ],
+        "4": [
+          "о",
+          "д"
+        ],
+        "5": [
+          "в",
+          "ж"
+        ],
+        "6": [
+          "и",
+          "п",
+          "о"
+        ],
+        "7": [
+          "в",
+          "е",
+          "н"
+        ],
+        "8": [
+          "а",
+          "т",
+          "р"
+        ],
+        "9": [
+          "н",
+          "р",
+          "о"
+        ],
+        "10": [
+          "и",
+          "п",
+          "б"
+        ],
+        "11": [
+          "е",
+          "в"
+        ],
+        "12": [
+          "а",
+          "т",
+          "р"
+        ],
+        "13": [
+          "н",
+          "р",
+          "т"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-144",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "public string <WORD>{get;set;}",
+      "executable_regex": "public\\s*string\\s*(?:lastname|login|name)\\{get;set;\\}",
+      "support": 3,
+      "vocabulary": {
+        "2": [
+          "lastname",
+          "login",
+          "name"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-145",
+      "type_sequence": [
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "“lifetime recovery-<WORD> meeting”",
+      "executable_regex": "“lifetime\\s*recovery\\-(?:executive|finance|board)\\s*meeting”",
+      "support": 3,
+      "vocabulary": {
+        "4": [
+          "executive",
+          "finance",
+          "board"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    },
+    {
+      "id": "tt-146",
+      "type_sequence": [
+        "NUM",
+        "WORD"
+      ],
+      "abstract_template": "<NUM> <WORD>",
+      "executable_regex": "(?:139|0)\\s*(?:xf305d719|x07279357|____3507)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "139",
+          "0"
+        ],
+        "1": [
+          "xf305d719",
+          "x07279357",
+          "____3507"
+        ]
+      },
+      "category": "Personal Identifiable Information"
+    }
+  ],
+  "Cloud & Service Provider Keys": [
+    {
+      "id": "tt-147",
+      "type_sequence": [
+        "KEY_MED"
+      ],
+      "abstract_template": "<SECRET_KEY>",
+      "executable_regex": "[A-Za-z0-9_\\-]{20,39}",
+      "support": 27,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-148",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><SECRET_KEY><PUNCT>",
+      "executable_regex": "(?:bscscan_api_key|youtube_api_key|use_auth_token|google_api_key|api_key|apikey|sa_id)=(?:\"|'|‘)[A-Za-z0-9_\\-]{20,39}(?:\"|'|’)",
+      "support": 13,
+      "vocabulary": {
+        "0": [
+          "bscscan_api_key",
+          "youtube_api_key",
+          "use_auth_token",
+          "google_api_key",
+          "api_key",
+          "apikey",
+          "sa_id"
+        ],
+        "2": [
+          "\"",
+          "'",
+          "‘"
+        ],
+        "4": [
+          "\"",
+          "'",
+          "’"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-149",
+      "type_sequence": [
+        "WORD"
+      ],
+      "abstract_template": "<WORD>",
+      "executable_regex": "(?:livekit_api_secret|react_app_stripe|livekit_api_key|e1oz87x7iod1ig|openai_api_key|stripe_key|openai_key|firebase|api_url|oauth)",
+      "support": 12,
+      "vocabulary": {
+        "0": [
+          "livekit_api_secret",
+          "react_app_stripe",
+          "livekit_api_key",
+          "e1oz87x7iod1ig",
+          "openai_api_key",
+          "stripe_key",
+          "openai_key",
+          "firebase",
+          "api_url",
+          "oauth"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-150",
+      "type_sequence": [
+        "KEY_LONG"
+      ],
+      "abstract_template": "<API_KEY>",
+      "executable_regex": "[A-Za-z0-9+\\/=_\\-]{40,}",
+      "support": 11,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-151",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "HASH",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><HASH><PUNCT>",
+      "executable_regex": "(?:client_secret|api_secret|client_id|api_key)=(?:\"|'|‘)[0-9a-fA-F]{32,64}(?:\"|'|’)",
+      "support": 10,
+      "vocabulary": {
+        "0": [
+          "client_secret",
+          "api_secret",
+          "client_id",
+          "api_key"
+        ],
+        "2": [
+          "\"",
+          "'",
+          "‘"
+        ],
+        "4": [
+          "\"",
+          "'",
+          "’"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-152",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "URL",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><URL><PUNCT>",
+      "executable_regex": "(?:api_base_url|rpc_api_url|base_url|api_url|url)=(?:\"|')https?://[^\\s\\'\"<>]+(?:\"|')",
+      "support": 7,
+      "vocabulary": {
+        "0": [
+          "api_base_url",
+          "rpc_api_url",
+          "base_url",
+          "api_url",
+          "url"
+        ],
+        "2": [
+          "\"",
+          "'"
+        ],
+        "4": [
+          "\"",
+          "'"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-153",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "KEY_LONG",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=\"<API_KEY>\"",
+      "executable_regex": "(?:access_token|api_key)=\"[A-Za-z0-9+\\/=_\\-]{40,}\"",
+      "support": 6,
+      "vocabulary": {
+        "0": [
+          "access_token",
+          "api_key"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-154",
+      "type_sequence": [
+        "URL"
+      ],
+      "abstract_template": "<URL>",
+      "executable_regex": "https?://[^\\s\\'\"<>]+",
+      "support": 6,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-155",
+      "type_sequence": [
+        "UNIX_PATH"
+      ],
+      "abstract_template": "<UNIX_PATH>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 5,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-156",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "JAVA_CLASS",
+        "WORD"
+      ],
+      "abstract_template": "<WORD>:<JAVA_CLASS> <WORD>",
+      "executable_regex": "(?:accesskey|apikey|secret):[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\s*(?:_secret_access_key|_access_key_id|_api_key)",
+      "support": 5,
+      "vocabulary": {
+        "0": [
+          "accesskey",
+          "apikey",
+          "secret"
+        ],
+        "3": [
+          "_secret_access_key",
+          "_access_key_id",
+          "_api_key"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-157",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><PUNCT><NUM><PUNCT>",
+      "executable_regex": "(?:messagingsenderid|account_id)(?:=|:)(?:\"|')(?:17841458386736965|6427461933)(?:\"|')",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "messagingsenderid",
+          "account_id"
+        ],
+        "1": [
+          "=",
+          ":"
+        ],
+        "2": [
+          "\"",
+          "'"
+        ],
+        "3": [
+          "17841458386736965",
+          "6427461933"
+        ],
+        "4": [
+          "\"",
+          "'"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-158",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD><PUNCT><WORD>",
+      "executable_regex": "(?:minio_access_key|minio_secret_key|openai)(?:\\.|=)(?:api_key|access|secret)(?:=|\\-)(?:openai_api_key|key)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "minio_access_key",
+          "minio_secret_key",
+          "openai"
+        ],
+        "1": [
+          ".",
+          "="
+        ],
+        "2": [
+          "api_key",
+          "access",
+          "secret"
+        ],
+        "3": [
+          "=",
+          "-"
+        ],
+        "4": [
+          "openai_api_key",
+          "key"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-159",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "KEY_MED"
+      ],
+      "abstract_template": "<WORD><PUNCT><SECRET_KEY>",
+      "executable_regex": "(?:environment|apikey)(?:\\.|:)[A-Za-z0-9_\\-]{20,39}",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "environment",
+          "apikey"
+        ],
+        "1": [
+          ".",
+          ":"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-160",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>",
+      "executable_regex": "(?:access_token|flashsd|api_key)(?:\\.|,|=)(?:google_api_key|user_token|net)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "access_token",
+          "flashsd",
+          "api_key"
+        ],
+        "1": [
+          ".",
+          ",",
+          "="
+        ],
+        "2": [
+          "google_api_key",
+          "user_token",
+          "net"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-161",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><PUNCT><PUNCT>",
+      "executable_regex": "(?:api_secret_mexc|api_key_mexc|anonkey)(?:=|:)(?:'|=)(?:'|\\))",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "api_secret_mexc",
+          "api_key_mexc",
+          "anonkey"
+        ],
+        "1": [
+          "=",
+          ":"
+        ],
+        "2": [
+          "'",
+          "="
+        ],
+        "3": [
+          "'",
+          ")"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-162",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "JAVA_CLASS",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<JAVA_CLASS>(\"<WORD>\")",
+      "executable_regex": "(?:together_api_key|api_key)=[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\(\"(?:together_api_key|openai_api_key)\"\\)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "together_api_key",
+          "api_key"
+        ],
+        "5": [
+          "together_api_key",
+          "openai_api_key"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-163",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "KEY_LONG"
+      ],
+      "abstract_template": "deployment id:<API_KEY>",
+      "executable_regex": "deployment\\s*id:[A-Za-z0-9+\\/=_\\-]{40,}",
+      "support": 3,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-164",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "URL"
+      ],
+      "abstract_template": "web app:<URL>",
+      "executable_regex": "web\\s*app:https?://[^\\s\\'\"<>]+",
+      "support": 3,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-165",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "UNIX_PATH"
+      ],
+      "abstract_template": "arn:aws:iam::667833941706:role <UNIX_PATH>",
+      "executable_regex": "arn:aws:iam::667833941706:role\\s*~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 3,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-166",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:access_key|api_key|apikey)=(?:\"|'|\\{)(?:mx0vgl44p77gaxntdp|bscscan_api_key|laokyc_admin)(?:\"|'|\\})",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "access_key",
+          "api_key",
+          "apikey"
+        ],
+        "2": [
+          "\"",
+          "'",
+          "{"
+        ],
+        "3": [
+          "mx0vgl44p77gaxntdp",
+          "bscscan_api_key",
+          "laokyc_admin"
+        ],
+        "4": [
+          "\"",
+          "'",
+          "}"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-167",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "URL",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "const modelurl='<URL>';",
+      "executable_regex": "const\\s*modelurl='https?://[^\\s\\'\"<>]+';",
+      "support": 3,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-168",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "acr_host=\"<SECRET_KEY>.acrcloud.com\"",
+      "executable_regex": "acr_host=\"[A-Za-z0-9_\\-]{20,39}\\.acrcloud\\.com\"",
+      "support": 3,
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-169",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>='<NUM>:<SECRET_KEY>'",
+      "executable_regex": "(?:api_token|token)='(?:6996318383|5912844693):[A-Za-z0-9_\\-]{20,39}'",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "api_token",
+          "token"
+        ],
+        "3": [
+          "6996318383",
+          "5912844693"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-170",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "HASH",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD> apikey=\"<HASH>\";",
+      "executable_regex": "(?:const|let)\\s*apikey=\"[0-9a-fA-F]{32,64}\";",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "const",
+          "let"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    },
+    {
+      "id": "tt-171",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "var <WORD>=\"<WORD>\";",
+      "executable_regex": "var\\s*(?:clientsecret|tenantid|clientid)=\"(?:client_secret|client_id|tenantid)\";",
+      "support": 3,
+      "vocabulary": {
+        "1": [
+          "clientsecret",
+          "tenantid",
+          "clientid"
+        ],
+        "4": [
+          "client_secret",
+          "client_id",
+          "tenantid"
+        ]
+      },
+      "category": "Cloud & Service Provider Keys"
+    }
+  ],
+  "Environment & Configuration": [
+    {
+      "id": "tt-172",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>",
+      "executable_regex": "(?:ansible_connection|configurations|api_token|api_host|db_pass|db_user|db_host|db_name|db_port|config|db_url|port|host|pipe|env)(?::|\\.|=|,)(?:somepassword|b42e99480888|postgresdsn|mongodburl|serverport|string|admin|php82|nginx|mysql|none|str|int|ssh|ctx)",
+      "support": 33,
+      "vocabulary": {
+        "0": [
+          "ansible_connection",
+          "configurations",
+          "api_token",
+          "api_host",
+          "db_pass",
+          "db_user",
+          "db_host",
+          "db_name",
+          "db_port",
+          "config",
+          "db_url",
+          "port",
+          "host",
+          "pipe",
+          "env"
+        ],
+        "1": [
+          ":",
+          ".",
+          "=",
+          ","
+        ],
+        "2": [
+          "somepassword",
+          "b42e99480888",
+          "postgresdsn",
+          "mongodburl",
+          "serverport",
+          "string",
+          "admin",
+          "php82",
+          "nginx",
+          "mysql",
+          "none",
+          "str",
+          "int",
+          "ssh",
+          "ctx"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-173",
+      "type_sequence": [
+        "UNIX_PATH"
+      ],
+      "abstract_template": "<UNIX_PATH>",
+      "executable_regex": "~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 19,
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-174",
+      "type_sequence": [
+        "JAVA_CLASS",
+        "WORD"
+      ],
+      "abstract_template": "<JAVA_CLASS> <WORD>",
+      "executable_regex": "[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\s*(?:_username|_password|_api_key|_secret|_url|_key)",
+      "support": 15,
+      "vocabulary": {
+        "1": [
+          "_username",
+          "_password",
+          "_api_key",
+          "_secret",
+          "_url",
+          "_key"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-175",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<PUNCT><SECRET_KEY><PUNCT>",
+      "executable_regex": "(?:bscscan_api_key|youtube_api_key|access_token|user_token|api_key)=(?:'|‘|\")[A-Za-z0-9_\\-]{20,39}(?:'|’|\")",
+      "support": 13,
+      "vocabulary": {
+        "0": [
+          "bscscan_api_key",
+          "youtube_api_key",
+          "access_token",
+          "user_token",
+          "api_key"
+        ],
+        "2": [
+          "'",
+          "‘",
+          "\""
+        ],
+        "4": [
+          "'",
+          "’",
+          "\""
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-176",
+      "type_sequence": [
+        "WORD"
+      ],
+      "abstract_template": "<WORD>",
+      "executable_regex": "(?:vue_app_secret_key|together_api_key|contract_address|container_name|secret_coords|logging_dir|output_dir|server_url|ip_op_path|infura_url|envconfig|env)",
+      "support": 12,
+      "vocabulary": {
+        "0": [
+          "vue_app_secret_key",
+          "together_api_key",
+          "contract_address",
+          "container_name",
+          "secret_coords",
+          "logging_dir",
+          "output_dir",
+          "server_url",
+          "ip_op_path",
+          "infura_url",
+          "envconfig",
+          "env"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-177",
+      "type_sequence": [
+        "WIN_PATH"
+      ],
+      "abstract_template": "<WIN_PATH>",
+      "executable_regex": "[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}",
+      "support": 11,
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-178",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "JAVA_CLASS",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "const <WORD>=<JAVA_CLASS> <WORD>;",
+      "executable_regex": "const\\s*(?:channel_id|client_id|guild_id|token)=[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\s*(?:_token|_id);",
+      "support": 11,
+      "vocabulary": {
+        "1": [
+          "channel_id",
+          "client_id",
+          "guild_id",
+          "token"
+        ],
+        "4": [
+          "_token",
+          "_id"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-179",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=os.<WORD>[\"<WORD>\"]",
+      "executable_regex": "(?:openai_api_key|client_key|client_id|username|password|api_key|apikey|key)=os\\.(?:environ|getenv|env)\\[\"(?:houndify_client_key|houndify_client_id|openai_api_key|ibm_username|ibm_password|wit_ai_key|bing_key|ai_key)\"\\]",
+      "support": 10,
+      "vocabulary": {
+        "0": [
+          "openai_api_key",
+          "client_key",
+          "client_id",
+          "username",
+          "password",
+          "api_key",
+          "apikey",
+          "key"
+        ],
+        "4": [
+          "environ",
+          "getenv",
+          "env"
+        ],
+        "7": [
+          "houndify_client_key",
+          "houndify_client_id",
+          "openai_api_key",
+          "ibm_username",
+          "ibm_password",
+          "wit_ai_key",
+          "bing_key",
+          "ai_key"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-180",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "JAVA_CLASS",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<JAVA_CLASS> <WORD>;",
+      "executable_regex": "(?:channel_id|client_id|guild_id|token)=[a-z][a-z0-9]*(?:\\.[a-zA-Z][a-zA-Z0-9]*){2,}\\s*(?:_token|_id);",
+      "support": 8,
+      "vocabulary": {
+        "0": [
+          "channel_id",
+          "client_id",
+          "guild_id",
+          "token"
+        ],
+        "3": [
+          "_token",
+          "_id"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-181",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=\"\"",
+      "executable_regex": "(?:acr_access_secret|acr_access_key|acr_host|config)=\"\"",
+      "support": 8,
+      "vocabulary": {
+        "0": [
+          "acr_access_secret",
+          "acr_access_key",
+          "acr_host",
+          "config"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-182",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "load_dotenv()",
+      "executable_regex": "load_dotenv\\(\\)",
+      "support": 6,
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-183",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WIN_PATH",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>='<WIN_PATH>'",
+      "executable_regex": "(?:audio_file_path|lrc_file_path|dotenv_path)='[A-Za-z]:[\\\\\\/][^\\n\\r\"\\'<>]{2,120}'",
+      "support": 5,
+      "vocabulary": {
+        "0": [
+          "audio_file_path",
+          "lrc_file_path",
+          "dotenv_path"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-184",
+      "type_sequence": [
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "$<WORD>=$data['<WORD>'];",
+      "executable_regex": "\\$(?:rulename|ipaddr|port|time|ip)=\\$data\\['(?:rulename|ipaddr|port|time|ip)'\\];",
+      "support": 5,
+      "vocabulary": {
+        "1": [
+          "rulename",
+          "ipaddr",
+          "port",
+          "time",
+          "ip"
+        ],
+        "7": [
+          "rulename",
+          "ipaddr",
+          "port",
+          "time",
+          "ip"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-185",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "environment.getproperty(\"db.<WORD>\");",
+      "executable_regex": "environment\\.getproperty\\(\"db\\.(?:aes_encryption_key|aes_encryption_iv|nomserveur|name)\"\\);",
+      "support": 4,
+      "vocabulary": {
+        "7": [
+          "aes_encryption_key",
+          "aes_encryption_iv",
+          "nomserveur",
+          "name"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-186",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "def <WORD>(self):",
+      "executable_regex": "def\\s*(?:_reconnect|__init__|connect|close)\\(self\\):",
+      "support": 4,
+      "vocabulary": {
+        "1": [
+          "_reconnect",
+          "__init__",
+          "connect",
+          "close"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-187",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>.<WORD><PUNCT><PUNCT><WORD><PUNCT><PUNCT>",
+      "executable_regex": "(?:process|os)\\.(?:getenv|env)(?:\\[|\\()(?:'|“)(?:eth_node_url|ti_token|ai_key|ch_id)(?:'|”)(?:\\]|\\))",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "process",
+          "os"
+        ],
+        "2": [
+          "getenv",
+          "env"
+        ],
+        "3": [
+          "[",
+          "("
+        ],
+        "4": [
+          "'",
+          "“"
+        ],
+        "5": [
+          "eth_node_url",
+          "ti_token",
+          "ai_key",
+          "ch_id"
+        ],
+        "6": [
+          "'",
+          "”"
+        ],
+        "7": [
+          "]",
+          ")"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-188",
+      "type_sequence": [
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "{{merch.<WORD>}}",
+      "executable_regex": "\\{\\{merch\\.(?:app_password|phone_number|login|notes)\\}\\}",
+      "support": 4,
+      "vocabulary": {
+        "4": [
+          "app_password",
+          "phone_number",
+          "login",
+          "notes"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-189",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=config['acr']['<WORD>']",
+      "executable_regex": "(?:acr_access_secret|acr_access_key)=config\\['acr'\\]\\['(?:access_secret|access_key)'\\]",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "acr_access_secret",
+          "acr_access_key"
+        ],
+        "10": [
+          "access_secret",
+          "access_key"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-190",
+      "type_sequence": [
+        "WORD",
+        "UNIX_PATH"
+      ],
+      "abstract_template": "logging <UNIX_PATH>",
+      "executable_regex": "logging\\s*~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 3,
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-191",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><PUNCT><PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:openai_api_key|env_file|baseurl)(?:=|:)(?:\\$|')(?:\\{|\\.)(?:openai_api_key|base_url|env)(?:\\}|')",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "openai_api_key",
+          "env_file",
+          "baseurl"
+        ],
+        "1": [
+          "=",
+          ":"
+        ],
+        "2": [
+          "$",
+          "'"
+        ],
+        "3": [
+          "{",
+          "."
+        ],
+        "4": [
+          "openai_api_key",
+          "base_url",
+          "env"
+        ],
+        "5": [
+          "}",
+          "'"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-192",
+      "type_sequence": [
+        "KEY_MED"
+      ],
+      "abstract_template": "<SECRET_KEY>",
+      "executable_regex": "[A-Za-z0-9_\\-]{20,39}",
+      "support": 3,
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-193",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>.<WORD><PUNCT><PUNCT><PUNCT>",
+      "executable_regex": "(?:openai|dotenv)\\.(?:api_base|api_key|config)(?:=|\\()(?:“|\\))(?:”|;)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "openai",
+          "dotenv"
+        ],
+        "2": [
+          "api_base",
+          "api_key",
+          "config"
+        ],
+        "3": [
+          "=",
+          "("
+        ],
+        "4": [
+          "“",
+          ")"
+        ],
+        "5": [
+          "”",
+          ";"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-194",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "input long <WORD>=<NUM>;",
+      "executable_regex": "input\\s*long\\s*(?:percenttodownint|pipstochangeint|percenttoupint)=(?:3|5);",
+      "support": 3,
+      "vocabulary": {
+        "2": [
+          "percenttodownint",
+          "pipstochangeint",
+          "percenttoupint"
+        ],
+        "4": [
+          "3",
+          "5"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-195",
+      "type_sequence": [
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "(redacted)",
+      "executable_regex": "\\(redacted\\)",
+      "support": 3,
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-196",
+      "type_sequence": [
+        "KEY_MED",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<SECRET_KEY><PUNCT><WORD>",
+      "executable_regex": "[A-Za-z0-9_\\-]{20,39}(?::|=)(?:somepassword|bitrixdock|root)",
+      "support": 3,
+      "vocabulary": {
+        "1": [
+          ":",
+          "="
+        ],
+        "2": [
+          "somepassword",
+          "bitrixdock",
+          "root"
+        ]
+      },
+      "category": "Environment & Configuration"
+    },
+    {
+      "id": "tt-197",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "NUM"
+      ],
+      "abstract_template": "<WORD>=<NUM>",
+      "executable_regex": "(?:mysql_root_password|mysql_password|smtp_port)=(?:123|465)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "mysql_root_password",
+          "mysql_password",
+          "smtp_port"
+        ],
+        "2": [
+          "123",
+          "465"
+        ]
+      },
+      "category": "Environment & Configuration"
+    }
+  ],
+  "Cryptocurrency": [
+    {
+      "id": "tt-198",
+      "type_sequence": [
+        "ETH_ADDR"
+      ],
+      "abstract_template": "<ETH_ADDRESS>",
+      "executable_regex": "0x[0-9a-fA-F]{40}",
+      "support": 24,
+      "category": "Cryptocurrency"
+    },
+    {
+      "id": "tt-199",
+      "type_sequence": [
+        "KEY_MED"
+      ],
+      "abstract_template": "<SECRET_KEY>",
+      "executable_regex": "[A-Za-z0-9_\\-]{20,39}",
+      "support": 6,
+      "category": "Cryptocurrency"
+    },
+    {
+      "id": "tt-200",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD> <WORD>",
+      "executable_regex": "(?:hexadecimal|private|mexc|flag)\\s*(?:private|key|api|is)\\s*(?:unknown|key|btc)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "hexadecimal",
+          "private",
+          "mexc",
+          "flag"
+        ],
+        "1": [
+          "private",
+          "key",
+          "api",
+          "is"
+        ],
+        "2": [
+          "unknown",
+          "key",
+          "btc"
+        ]
+      },
+      "category": "Cryptocurrency"
+    },
+    {
+      "id": "tt-201",
+      "type_sequence": [
+        "WORD",
+        "WORD"
+      ],
+      "abstract_template": "<WORD> <WORD>",
+      "executable_regex": "(?:private|weakest|uint64|master)\\s*(?:subscriptionid|adresse|ket|key)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "private",
+          "weakest",
+          "uint64",
+          "master"
+        ],
+        "1": [
+          "subscriptionid",
+          "adresse",
+          "ket",
+          "key"
+        ]
+      },
+      "category": "Cryptocurrency"
+    },
+    {
+      "id": "tt-202",
+      "type_sequence": [
+        "URL"
+      ],
+      "abstract_template": "<URL>",
+      "executable_regex": "https?://[^\\s\\'\"<>]+",
+      "support": 4,
+      "category": "Cryptocurrency"
+    }
+  ],
+  "Cryptographic Material": [
+    {
+      "id": "tt-203",
+      "type_sequence": [
+        "WORD"
+      ],
+      "abstract_template": "<WORD>",
+      "executable_regex": "(?:jwt_refresh_secret|cryptohackthebox|private_key|jwt_secret|rfyo82rid5|hackthebox|signature|aes|md5)",
+      "support": 9,
+      "vocabulary": {
+        "0": [
+          "jwt_refresh_secret",
+          "cryptohackthebox",
+          "private_key",
+          "jwt_secret",
+          "rfyo82rid5",
+          "hackthebox",
+          "signature",
+          "aes",
+          "md5"
+        ]
+      },
+      "category": "Cryptographic Material"
+    },
+    {
+      "id": "tt-204",
+      "type_sequence": [
+        "HASH"
+      ],
+      "abstract_template": "<HASH>",
+      "executable_regex": "[0-9a-fA-F]{32,64}",
+      "support": 6,
+      "category": "Cryptographic Material"
+    },
+    {
+      "id": "tt-205",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "secret:\"mysecretkey\"",
+      "executable_regex": "secret:\"mysecretkey\"",
+      "support": 5,
+      "category": "Cryptographic Material"
+    },
+    {
+      "id": "tt-206",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:fernet|b)(?:'|\\()(?:gzhu_ab1aze_2023|key)(?:'|\\))",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "fernet",
+          "b"
+        ],
+        "1": [
+          "'",
+          "("
+        ],
+        "2": [
+          "gzhu_ab1aze_2023",
+          "key"
+        ],
+        "3": [
+          "'",
+          ")"
+        ]
+      },
+      "category": "Cryptographic Material"
+    },
+    {
+      "id": "tt-207",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD"
+      ],
+      "abstract_template": "<WORD><PUNCT><WORD>",
+      "executable_regex": "(?:motdepasse|token|key3|r)(?::|=|\\-|\\.)(?:alex|jwt|rr1|dp)",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "motdepasse",
+          "token",
+          "key3",
+          "r"
+        ],
+        "1": [
+          ":",
+          "=",
+          "-",
+          "."
+        ],
+        "2": [
+          "alex",
+          "jwt",
+          "rr1",
+          "dp"
+        ]
+      },
+      "category": "Cryptographic Material"
+    },
+    {
+      "id": "tt-208",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>=<WORD>[p,<WORD>,<WORD>,<WORD><PUNCT><WORD>,<WORD>,<WORD>]",
+      "executable_regex": "(?:rr1|cp|r|q)=(?:ellipticadd|eliptic)\\[p,(?:cc|k|s|a),(?:p|b),(?:a|c)(?:,|\\+)(?:ii|b),(?:cp|c),(?:ii|rq)\\]",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "rr1",
+          "cp",
+          "r",
+          "q"
+        ],
+        "2": [
+          "ellipticadd",
+          "eliptic"
+        ],
+        "6": [
+          "cc",
+          "k",
+          "s",
+          "a"
+        ],
+        "8": [
+          "p",
+          "b"
+        ],
+        "10": [
+          "a",
+          "c"
+        ],
+        "11": [
+          ",",
+          "+"
+        ],
+        "12": [
+          "ii",
+          "b"
+        ],
+        "14": [
+          "cp",
+          "c"
+        ],
+        "16": [
+          "ii",
+          "rq"
+        ]
+      },
+      "category": "Cryptographic Material"
+    },
+    {
+      "id": "tt-209",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "HASH",
+        "PUNCT"
+      ],
+      "abstract_template": "privatekey='<HASH>'",
+      "executable_regex": "privatekey='[0-9a-fA-F]{32,64}'",
+      "support": 3,
+      "category": "Cryptographic Material"
+    },
+    {
+      "id": "tt-210",
+      "type_sequence": [
+        "NUM",
+        "WORD"
+      ],
+      "abstract_template": "0 <WORD>",
+      "executable_regex": "0\\s*(?:x07279357|xf305d719|x6167aa61)",
+      "support": 3,
+      "vocabulary": {
+        "1": [
+          "x07279357",
+          "xf305d719",
+          "x6167aa61"
+        ]
+      },
+      "category": "Cryptographic Material"
+    }
+  ],
+  "Financial Information": [
+    {
+      "id": "tt-211",
+      "type_sequence": [
+        "WORD"
+      ],
+      "abstract_template": "<WORD>",
+      "executable_regex": "(?:reference|signature|currency|amount|token1|token2|month|email|phone|pan1|year|name|xxx|fee|cvc)",
+      "support": 22,
+      "vocabulary": {
+        "0": [
+          "reference",
+          "signature",
+          "currency",
+          "amount",
+          "token1",
+          "token2",
+          "month",
+          "email",
+          "phone",
+          "pan1",
+          "year",
+          "name",
+          "xxx",
+          "fee",
+          "cvc"
+        ]
+      },
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-212",
+      "type_sequence": [
+        "NUM"
+      ],
+      "abstract_template": "<NUM>",
+      "executable_regex": "(?:4242424242424242|447860099319|1000000000|123)",
+      "support": 10,
+      "vocabulary": {
+        "0": [
+          "4242424242424242",
+          "447860099319",
+          "1000000000",
+          "123"
+        ]
+      },
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-213",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "NUM",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>:<PUNCT><NUM><PUNCT>",
+      "executable_regex": "(?:paymentdescriptor|accountnumber|expdatemonth|expdateyear|phonenumber|balance|cvv):(?:\"|')(?:12345678912345|3617843617841|8132837275|911|12|24|0)(?:\"|')",
+      "support": 8,
+      "vocabulary": {
+        "0": [
+          "paymentdescriptor",
+          "accountnumber",
+          "expdatemonth",
+          "expdateyear",
+          "phonenumber",
+          "balance",
+          "cvv"
+        ],
+        "2": [
+          "\"",
+          "'"
+        ],
+        "3": [
+          "12345678912345",
+          "3617843617841",
+          "8132837275",
+          "911",
+          "12",
+          "24",
+          "0"
+        ],
+        "4": [
+          "\"",
+          "'"
+        ]
+      },
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-214",
+      "type_sequence": [
+        "PUNCT",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "FLOAT"
+      ],
+      "abstract_template": "\"<WORD>\":<FLOAT>",
+      "executable_regex": "\"(?:totaltaxableamount|totalcgstvalue|totalsgstvalue|totaligstvalue|totalcessvalue|totalamount|totaltax)\":(?:3169551\\.0|2934000\\.0|351214\\.5|118167\\.0|72590\\.0|87867\\.5)",
+      "support": 8,
+      "vocabulary": {
+        "1": [
+          "totaltaxableamount",
+          "totalcgstvalue",
+          "totalsgstvalue",
+          "totaligstvalue",
+          "totalcessvalue",
+          "totalamount",
+          "totaltax"
+        ],
+        "4": [
+          "3169551.0",
+          "2934000.0",
+          "351214.5",
+          "118167.0",
+          "72590.0",
+          "87867.5"
+        ]
+      },
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-215",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD>:<WORD> tag with id=<PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:country|expiry|cvc):(?:select|input)\\s*tag\\s*with\\s*id=(?:“|\")(?:billingcountry|cardexpiry|cardcvc)(?:”|\")",
+      "support": 6,
+      "vocabulary": {
+        "0": [
+          "country",
+          "expiry",
+          "cvc"
+        ],
+        "2": [
+          "select",
+          "input"
+        ],
+        "7": [
+          "“",
+          "\""
+        ],
+        "8": [
+          "billingcountry",
+          "cardexpiry",
+          "cardcvc"
+        ],
+        "9": [
+          "”",
+          "\""
+        ]
+      },
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-216",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "WORD",
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD> <WORD>:input tag with id=<PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:cardholder|card)\\s*(?:name|num):input\\s*tag\\s*with\\s*id=(?:“|\")(?:billingname|cardnumber)(?:”|\")",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "cardholder",
+          "card"
+        ],
+        "1": [
+          "name",
+          "num"
+        ],
+        "8": [
+          "“",
+          "\""
+        ],
+        "9": [
+          "billingname",
+          "cardnumber"
+        ],
+        "10": [
+          "”",
+          "\""
+        ]
+      },
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-217",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "PUNCT",
+        "WORD",
+        "PUNCT"
+      ],
+      "abstract_template": "<WORD><PUNCT><PUNCT><WORD><PUNCT>",
+      "executable_regex": "(?:email_app_password|accountholdername|accounttype|ifsccode)(?::|=)(?:\"|')(?:brwgearofnryfinh|acct_savings|icic0000424|fdsa)(?:\"|')",
+      "support": 4,
+      "vocabulary": {
+        "0": [
+          "email_app_password",
+          "accountholdername",
+          "accounttype",
+          "ifsccode"
+        ],
+        "1": [
+          ":",
+          "="
+        ],
+        "2": [
+          "\"",
+          "'"
+        ],
+        "3": [
+          "brwgearofnryfinh",
+          "acct_savings",
+          "icic0000424",
+          "fdsa"
+        ],
+        "4": [
+          "\"",
+          "'"
+        ]
+      },
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-218",
+      "type_sequence": [
+        "WORD",
+        "UNIX_PATH"
+      ],
+      "abstract_template": "mm <UNIX_PATH>",
+      "executable_regex": "mm\\s*~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 4,
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-219",
+      "type_sequence": [
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT"
+      ],
+      "abstract_template": "<<SECRET_KEY>>",
+      "executable_regex": "<[A-Za-z0-9_\\-]{20,39}>",
+      "support": 3,
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-220",
+      "type_sequence": [
+        "WORD",
+        "WORD",
+        "WORD",
+        "PUNCT",
+        "NUM",
+        "PUNCT",
+        "WORD",
+        "NUM"
+      ],
+      "abstract_template": "<WORD> <WORD> <WORD>$<NUM>:jun <NUM>",
+      "executable_regex": "(?:bought|bank)\\s*(?:electricity|total|shoes)\\s*(?:for|is)\\$(?:70345|30|5):jun\\s*(?:18|19|20)",
+      "support": 3,
+      "vocabulary": {
+        "0": [
+          "bought",
+          "bank"
+        ],
+        "1": [
+          "electricity",
+          "total",
+          "shoes"
+        ],
+        "2": [
+          "for",
+          "is"
+        ],
+        "4": [
+          "70345",
+          "30",
+          "5"
+        ],
+        "7": [
+          "18",
+          "19",
+          "20"
+        ]
+      },
+      "category": "Financial Information"
+    },
+    {
+      "id": "tt-221",
+      "type_sequence": [
+        "WORD",
+        "PUNCT",
+        "KEY_MED",
+        "PUNCT",
+        "PUNCT",
+        "IP_PORT",
+        "UNIX_PATH"
+      ],
+      "abstract_template": "admin:<SECRET_KEY>!@<IP:PORT> <UNIX_PATH>",
+      "executable_regex": "admin:[A-Za-z0-9_\\-]{20,39}!@\\d{1,3}(?:\\.\\d{1,3}){3}:\\d{1,5}\\s*~?(?:\\/[\\w._\\-@~]{1,60}){1,15}\\/?",
+      "support": 3,
+      "category": "Financial Information"
+    }
+  ]
+}

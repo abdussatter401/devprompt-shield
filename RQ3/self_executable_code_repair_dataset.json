@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "title": "Simple Self-Executable Code Repair Dataset for Sensitive Prompt Sanitization",
+    "version": "2.0-simple",
+    "date": "2026-05-11",
+    "description": "20 tiny Python-only code repair prompts. Each buggy program contains a synthetic sensitive span or error pattern. Each fixed program is standalone and executable with the Python standard library only.",
+    "total_programs": 20,
+    "language": "Python",
+    "dependencies": "Python standard library only",
+    "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+    "source_note": "Simplified from the original synthetic sensitive developer prompt dataset.",
+    "safety_note": "All credentials, paths, IPs, emails, tokens, and identifiers are synthetic test values."
+  },
+  "programs": [
+    {
+      "id": 1,
+      "language": "Python",
+      "pattern": "traceback_unix_line_func",
+      "category": "Error & Debug Information",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "TRACEBACK_TEXT = 'File \"/home/deploy/services/invoice-service/app/billing.py\", line 34, in load_stripe_client'\n\ndef circle_area(radius):\n    return math.pi * radius * radius\n\nprint(round(circle_area(2), 2))\n",
+      "fixed_code": "import math\n\nTRACEBACK_TEXT = 'File \"/home/deploy/services/invoice-service/app/billing.py\", line 34, in load_stripe_client'\n\ndef circle_area(radius):\n    return math.pi * radius * radius\n\nprint(round(circle_area(2), 2))\n",
+      "expected_output": "12.57"
+    },
+    {
+      "id": 2,
+      "language": "Python",
+      "pattern": "traceback_win_line_module",
+      "category": "Error & Debug Information",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "TRACEBACK_TEXT = 'File \"C:\\\\Users\\\\appuser\\\\projects\\\\upload.py\", line 28, in <module>'\n\ndef is_palindrome(s):\n    return s == s[::-1]\n\nassert is_palindrome(\"Racecar\") == True\nprint(\"ok\")\n",
+      "fixed_code": "TRACEBACK_TEXT = 'File \"C:\\\\Users\\\\appuser\\\\projects\\\\upload.py\", line 28, in <module>'\n\ndef is_palindrome(s):\n    return s.lower() == s.lower()[::-1]\n\nassert is_palindrome(\"Racecar\") == True\nprint(\"ok\")\n",
+      "expected_output": "ok"
+    },
+    {
+      "id": 3,
+      "language": "Python",
+      "pattern": "unix_path",
+      "category": "Error & Debug Information",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "CONFIG_PATH = \"/etc/myapp/config.yaml\"\n\ndef fahrenheit_to_celsius(f):\n    return round((f - 32) * 9 / 5, 2)\n\nprint(fahrenheit_to_celsius(100))\n",
+      "fixed_code": "CONFIG_PATH = \"/etc/myapp/config.yaml\"\n\ndef fahrenheit_to_celsius(f):\n    return round((f - 32) * 5 / 9, 2)\n\nprint(fahrenheit_to_celsius(100))\n",
+      "expected_output": "37.78"
+    },
+    {
+      "id": 4,
+      "language": "Python",
+      "pattern": "win_path",
+      "category": "Error & Debug Information",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "import os\n\nLOG_PATH = \"C:\\\\ProgramData\\\\MyService\\\\logs\"\n\ndef ensure_log_dir(path):\n    os.makedirs(path)   # BUG: missing exist_ok=True\n\nensure_log_dir(\"test_log_dir\")\nensure_log_dir(\"test_log_dir\")\nos.rmdir(\"test_log_dir\")\nprint(\"done\")\n",
+      "fixed_code": "import os\n\nLOG_PATH = \"C:\\\\ProgramData\\\\MyService\\\\logs\"\n\ndef ensure_log_dir(path):\n    os.makedirs(path, exist_ok=True)\n\nensure_log_dir(\"test_log_dir\")\nensure_log_dir(\"test_log_dir\")\nos.rmdir(\"test_log_dir\")\nprint(\"done\")\n",
+      "expected_output": "done"
+    },
+    {
+      "id": 5,
+      "language": "Python",
+      "pattern": "db_uri",
+      "category": "Database & Connection Strings",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "DB_URI = \"postgresql://svc_user:S3cur3P%40ssw0rd@192.168.10.45:5432/inventory_db\"\n\ndef get_db_port(uri):\n    return uri.split(\":\")[3]\n\nprint(get_db_port(DB_URI))\n",
+      "fixed_code": "DB_URI = \"postgresql://svc_user:S3cur3P%40ssw0rd@192.168.10.45:5432/inventory_db\"\n\ndef get_db_port(uri):\n    return uri.split(\":\")[3].split(\"/\")[0]\n\nprint(get_db_port(DB_URI))\n",
+      "expected_output": "5432"
+    },
+    {
+      "id": 6,
+      "language": "Python",
+      "pattern": "jdbc_url",
+      "category": "Database & Connection Strings",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "JDBC_URL = \"jdbc:mysql://db.corp-example.com:3306/shop_db?useSSL=false&serverTimezone=UTC\"\n\nsql = \"INSERT INTO order (user_id, total) VALUES (1, 20)\"\n\ndef check_sql(query):\n    if \"INSERT INTO order \" in query:\n        raise SyntaxError(\"order is a reserved word\")\n    return query\n\nprint(check_sql(sql))\n",
+      "fixed_code": "JDBC_URL = \"jdbc:mysql://db.corp-example.com:3306/shop_db?useSSL=false&serverTimezone=UTC\"\n\nsql = \"INSERT INTO `order` (user_id, total) VALUES (1, 20)\"\n\ndef check_sql(query):\n    if \"INSERT INTO order \" in query:\n        raise SyntaxError(\"order is a reserved word\")\n    return query\n\nprint(check_sql(sql))\n",
+      "expected_output": "INSERT INTO `order` (user_id, total) VALUES (1, 20)"
+    },
+    {
+      "id": 7,
+      "language": "Python",
+      "pattern": "url",
+      "category": "Network & Infrastructure",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "TOKEN_VALIDATION_URL = \"https://auth.corp-example.internal/api/v1/validate-token\"\n\ndef fake_post(url):\n    working_url = \"https://auth.corp-example.internal/api/v2/validate-token\"\n    if url != working_url:\n        raise RuntimeError(\"404 Not Found\")\n    return {\"valid\": True}\n\nresult = fake_post(TOKEN_VALIDATION_URL)\nprint(result[\"valid\"])\n",
+      "fixed_code": "TOKEN_VALIDATION_URL = \"https://auth.corp-example.internal/api/v2/validate-token\"\n\ndef fake_post(url):\n    working_url = \"https://auth.corp-example.internal/api/v2/validate-token\"\n    if url != working_url:\n        raise RuntimeError(\"404 Not Found\")\n    return {\"valid\": True}\n\nresult = fake_post(TOKEN_VALIDATION_URL)\nprint(result[\"valid\"])\n",
+      "expected_output": "True"
+    },
+    {
+      "id": 8,
+      "language": "Python",
+      "pattern": "ip_address",
+      "category": "Network & Infrastructure",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "METRICS_HOST = \"203.0.113.42\"\nMETRICS_PORT = 9090\n\ndef connect(host, port):\n    if (host, port) != (\"203.0.113.42\", 9091):\n        raise ConnectionRefusedError(\"connection refused\")\n    return \"connected\"\n\nprint(connect(METRICS_HOST, METRICS_PORT))\n",
+      "fixed_code": "METRICS_HOST = \"203.0.113.42\"\nMETRICS_PORT = 9091\n\ndef connect(host, port):\n    if (host, port) != (\"203.0.113.42\", 9091):\n        raise ConnectionRefusedError(\"connection refused\")\n    return \"connected\"\n\nprint(connect(METRICS_HOST, METRICS_PORT))\n",
+      "expected_output": "connected"
+    },
+    {
+      "id": 9,
+      "language": "Python",
+      "pattern": "key_eq_med_key",
+      "category": "Credentials & Secrets",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "bscscan_api_key = \"K9ABCDEFGHIJKLMN12345678\"\n\ndef build_query(address):\n    data = {\"address\": address, \"apikey\": bscscan_api_key}\n    return urllib.parse.urlencode(data)\n\nprint(build_query(\"0xabc\"))\n",
+      "fixed_code": "import urllib.parse\n\nbscscan_api_key = \"K9ABCDEFGHIJKLMN12345678\"\n\ndef build_query(address):\n    data = {\"address\": address, \"apikey\": bscscan_api_key}\n    return urllib.parse.urlencode(data)\n\nprint(build_query(\"0xabc\"))\n",
+      "expected_output": "address=0xabc&apikey=K9ABCDEFGHIJKLMN12345678"
+    },
+    {
+      "id": 10,
+      "language": "Python",
+      "pattern": "key_eq_long_key",
+      "category": "Credentials & Secrets",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "access_token = \"sk-aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789abcdefghij\"\n\ndef authenticate(token):\n    if token != \"sk-aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789abcdefghij\":\n        raise PermissionError(\"401 Unauthorized\")\n    return \"ok\"\n\nraw = access_token + \"\\n\"\nprint(authenticate(raw))\n",
+      "fixed_code": "access_token = \"sk-aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789abcdefghij\"\n\ndef authenticate(token):\n    if token != \"sk-aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789abcdefghij\":\n        raise PermissionError(\"401 Unauthorized\")\n    return \"ok\"\n\nraw = access_token + \"\\n\"\nprint(authenticate(raw.strip()))\n",
+      "expected_output": "ok"
+    },
+    {
+      "id": 11,
+      "language": "Python",
+      "pattern": "key_eq_hash",
+      "category": "Credentials & Secrets",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "import hashlib\nimport hmac\n\nsign = \"3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d\"\npayload = b\"hello\"\nheader = \"sha1=\" + hmac.new(sign.encode(), payload, hashlib.sha1).hexdigest()\n\ndef verify(payload, header):\n    expected = header.split(\"=\")[1]\n    computed = hmac.new(sign.encode(), payload, hashlib.sha256).hexdigest()\n    return hmac.compare_digest(computed, expected)\n\nassert verify(payload, header)\nprint(\"valid\")\n",
+      "fixed_code": "import hashlib\nimport hmac\n\nsign = \"3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d\"\npayload = b\"hello\"\nheader = \"sha1=\" + hmac.new(sign.encode(), payload, hashlib.sha1).hexdigest()\n\ndef verify(payload, header):\n    expected = header.split(\"=\")[1]\n    computed = hmac.new(sign.encode(), payload, hashlib.sha1).hexdigest()\n    return hmac.compare_digest(computed, expected)\n\nassert verify(payload, header)\nprint(\"valid\")\n",
+      "expected_output": "valid"
+    },
+    {
+      "id": 12,
+      "language": "Python",
+      "pattern": "telegram_bot_token",
+      "category": "Credentials & Secrets",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "import re\n\nbot_token = \"7201234567:AAFzXvDk_LmNpQrSt_UvWxYz12345abcde\"\n\ndef validate_token_format(token):\n    return bool(re.match(r\"^\\d+:[A-Za-z0-9]{20,50}$\", token))   # BUG: _ and - not in char class\n\nassert validate_token_format(bot_token) == True\nprint(\"valid\")\n",
+      "fixed_code": "import re\n\nbot_token = \"7201234567:AAFzXvDk_LmNpQrSt_UvWxYz12345abcde\"\n\ndef validate_token_format(token):\n    return bool(re.match(r\"^\\d+:[A-Za-z0-9_\\-]{20,50}$\", token))\n\nassert validate_token_format(bot_token) == True\nprint(\"valid\")\n",
+      "expected_output": "valid"
+    },
+    {
+      "id": 13,
+      "language": "Python",
+      "pattern": "aws_access_key_id",
+      "category": "Credentials & Secrets",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "import os\n\nAWS_KEY_ID = 'AKIAIOSFODNN7EXAMPLE'\n\ndef is_key_set():\n    return 'AWS_ACCESS_KEY_ID' in os.environ\n\nprint(is_key_set())\n",
+      "fixed_code": "import os\n\nAWS_KEY_ID = 'AKIAIOSFODNN7EXAMPLE'\nos.environ['AWS_ACCESS_KEY_ID'] = AWS_KEY_ID\n\ndef is_key_set():\n    return 'AWS_ACCESS_KEY_ID' in os.environ\n\nprint(is_key_set())\n",
+      "expected_output": "True"
+    },
+    {
+      "id": 14,
+      "language": "Python",
+      "pattern": "jwt_token",
+      "category": "Credentials & Secrets",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "import base64, json\n\nJWT = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzQ3In0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\"\nheaders = {\"Authorization\": \"Bearer \" + JWT}\n\ndef get_subject(hdrs):\n    token = hdrs[\"authorization\"]\n    token = token.removeprefix(\"Bearer \").strip()\n    parts = token.split(\".\")\n    payload_b64 = parts[1] + \"==\"\n    return json.loads(base64.urlsafe_b64decode(payload_b64))[\"sub\"]\n\nprint(get_subject(headers))\n",
+      "fixed_code": "import base64, json\n\nJWT = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzQ3In0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\"\nheaders = {\"Authorization\": \"Bearer \" + JWT}\n\ndef get_subject(hdrs):\n    token = hdrs[\"Authorization\"]\n    token = token.removeprefix(\"Bearer \").strip()\n    parts = token.split(\".\")\n    payload_b64 = parts[1] + \"==\"\n    return json.loads(base64.urlsafe_b64decode(payload_b64))[\"sub\"]\n\nprint(get_subject(headers))\n",
+      "expected_output": "user_47"
+    },
+    {
+      "id": 15,
+      "language": "Python",
+      "pattern": "pem_block",
+      "category": "Cryptographic Material",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "\"\"\"\nServer certificate used by the API (renewal: 2025-Q4):\n-----BEGIN CERTIFICATE-----\nMIICpDCCAYwCCQDU9pQ4pHgSpDANBgkqhkiG9w0BAQsFADAUMRIwEAYDVQQDDAlsb2NhbGhvc3Qw\n-----END CERTIFICATE-----\n\"\"\"\n\n\ndef is_leap_year(year):\n    return year % 4 == 0   # BUG: missing century-year correction\n\n\nprint(is_leap_year(2100))\n",
+      "fixed_code": "\"\"\"\nServer certificate used by the API (renewal: 2025-Q4):\n-----BEGIN CERTIFICATE-----\nMIICpDCCAYwCCQDU9pQ4pHgSpDANBgkqhkiG9w0BAQsFADAUMRIwEAYDVQQDDAlsb2NhbGhvc3Qw\n-----END CERTIFICATE-----\n\"\"\"\n\n\ndef is_leap_year(year):\n    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)\n\n\nprint(is_leap_year(2100))\n",
+      "expected_output": "False"
+    },
+    {
+      "id": 16,
+      "language": "Python",
+      "pattern": "hex_hash",
+      "category": "Cryptographic Material",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "import hashlib\n\nEXPECTED = \"2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824\"\n\nwith open(\"release.bin\", \"wb\") as f:\n    f.write(b\"hello\")\n\nactual = hashlib.sha256(open(\"release.bin\").read()).hexdigest()\nassert actual == EXPECTED\nprint(\"ok\")\n",
+      "fixed_code": "import hashlib\n\nEXPECTED = \"2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824\"\n\nwith open(\"release.bin\", \"wb\") as f:\n    f.write(b\"hello\")\n\nwith open(\"release.bin\", \"rb\") as f:\n    actual = hashlib.sha256(f.read()).hexdigest()\n\nassert actual == EXPECTED\nprint(\"ok\")\n",
+      "expected_output": "ok"
+    },
+    {
+      "id": 17,
+      "language": "Python",
+      "pattern": "email_address",
+      "category": "Personal Identifiable Information",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "import re\n\nemail = \"alice+newsletter@mail.corp-example.com\"\n\ndef validate_email(value):\n    pattern = r\"^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$\"\n    if not re.match(pattern, value):\n        raise ValueError(f\"Invalid email: {value}\")\n    return value\n\nprint(validate_email(email))\n",
+      "fixed_code": "import re\n\nemail = \"alice+newsletter@mail.corp-example.com\"\n\ndef validate_email(value):\n    pattern = r\"^[\\w.%+\\-]+@[\\w.\\-]+\\.[a-zA-Z]{2,}$\"\n    if not re.match(pattern, value):\n        raise ValueError(f\"Invalid email: {value}\")\n    return value\n\nprint(validate_email(email))\n",
+      "expected_output": "alice+newsletter@mail.corp-example.com"
+    },
+    {
+      "id": 18,
+      "language": "Python",
+      "pattern": "uuid",
+      "category": "Personal Identifiable Information",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "USER_ID = \"550e8400-e29b-41d4-a716-446655440000\"\n\n\ndef to_urn(uid):\n    return \"URN:UUID:\" + uid   # BUG: prefix must be lowercase \"urn:uuid:\"\n\n\nprint(to_urn(USER_ID))\n",
+      "fixed_code": "USER_ID = \"550e8400-e29b-41d4-a716-446655440000\"\n\n\ndef to_urn(uid):\n    return \"urn:uuid:\" + uid\n\n\nprint(to_urn(USER_ID))\n",
+      "expected_output": "urn:uuid:550e8400-e29b-41d4-a716-446655440000"
+    },
+    {
+      "id": 19,
+      "language": "Python",
+      "pattern": "credit_card_number",
+      "category": "Financial Information",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "def luhn_check(card_number):\n    digits = [int(d) for d in card_number if d.isdigit()]\n    for i in range(len(digits) - 1, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n\nprint(luhn_check(\"4532015112830366\"))\n",
+      "fixed_code": "def luhn_check(card_number):\n    digits = [int(d) for d in card_number if d.isdigit()]\n    for i in range(len(digits) - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n\nprint(luhn_check(\"4532015112830366\"))\n",
+      "expected_output": "True"
+    },
+    {
+      "id": 20,
+      "language": "Python",
+      "pattern": "eth_address + db_uri + traceback_unix_line_func + email_address",
+      "category": "Multiple Sensitive Categories",
+      "instruction": "Fix the following program. Return only the corrected code. Do not explain.",
+      "buggy_code": "TRACEBACK_TEXT = 'File \"/srv/jobs/settlement/fetch_balances.py\", line 61, in sync_wallet'\nWALLET = \"0xAbCd1234EF5678aB9012cDEF3456AB7890cDef12\"\nDB_URI = \"postgresql://settle_svc:R3c0nc1le!@10.0.0.55:5432/settlements_db\"\nOPS_EMAIL = \"devops@corp-example.com\"\n\ndef get_balance(address):\n    if address != address.lower():\n        raise ValueError(\"InvalidAddress\")\n    return 10\n\nprint(get_balance(WALLET))\n",
+      "fixed_code": "TRACEBACK_TEXT = 'File \"/srv/jobs/settlement/fetch_balances.py\", line 61, in sync_wallet'\nWALLET = \"0xAbCd1234EF5678aB9012cDEF3456AB7890cDef12\"\nDB_URI = \"postgresql://settle_svc:R3c0nc1le!@10.0.0.55:5432/settlements_db\"\nOPS_EMAIL = \"devops@corp-example.com\"\n\ndef get_balance(address):\n    address = address.lower()\n    return 10\n\nprint(get_balance(WALLET))\n",
+      "expected_output": "10"
+    }
+  ]
+}
