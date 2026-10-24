@@ -1,5 +1,5 @@
 # Artifacts
-## RQ1: Fine-tuning
+## RQ1: Fine-tuning / Detection
 
 - `01_finetune.py`: fine-tunes the compact encoders on `dataset/q-fine-tune.jsonl`
 - `02_eval_models.py`: evaluates the fine-tuned models on `dataset/m_3000.jsonl`
@@ -8,12 +8,12 @@
 - `dataset/`: `q-fine-tune.jsonl` (training, validation and test split) and `m_3000.jsonl` (evaluation set)
 - `prompt-improvisation/`: `q_200.jsonl` and the zero-shot classification prompt
 
-## RQ2: Mined patterns and spans
+## RQ2: Localization
 
 - `regexes.json`: the mined regular expressions
 - `spans.jsonl`: the mined sensitive spans
 - `m_span_616.jsonl`: the annotated spans for the sensitive evaluation prompts
 
-## RQ3: Sanitization study
+## RQ3: Sanitization
 - `run_eval.py`, `self_executable_code_repair_dataset.json`: the code-repair evaluation (needs a local Ollama server)
 
